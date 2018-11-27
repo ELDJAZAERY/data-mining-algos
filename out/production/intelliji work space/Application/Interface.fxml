@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1315.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1351.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller">
    <children>
       <TabPane layoutX="120.0" layoutY="21.0" prefHeight="300.0" prefWidth="1315.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -188,7 +188,7 @@
                         <ComboBox fx:id="combobox2" layoutX="41.0" layoutY="46.0" prefHeight="31.0" prefWidth="227.0" />
                         <TextField fx:id="confiance" accessibleRole="TEXT" layoutX="447.0" layoutY="43.0" promptText="75" />
                         <TextField fx:id="support" layoutX="696.0" layoutY="43.0" promptText="100" />
-                        <Button fx:id="process" layoutX="1021.0" layoutY="42.0" mnemonicParsing="false" onAction="#process" prefHeight="40.0" prefWidth="216.0" text="Lance">
+                        <Button layoutX="1021.0" layoutY="42.0" mnemonicParsing="false" onAction="#process" prefHeight="40.0" prefWidth="216.0" text="Lance">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -203,7 +203,24 @@
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Label>
-                        <TextArea fx:id="out" layoutX="41.0" layoutY="110.0" prefHeight="518.0" prefWidth="1226.0" styleClass="text-area" />
+                        <TextArea fx:id="outInstance" editable="false" layoutX="15.0" layoutY="126.0" prefHeight="495.0" prefWidth="395.0" styleClass="text-area" />
+                        <TextArea fx:id="outItems" editable="false" layoutX="428.0" layoutY="126.0" prefHeight="495.0" prefWidth="392.0" styleClass="text-area" />
+                        <TextArea fx:id="outRegles" editable="false" layoutX="840.0" layoutY="126.0" prefHeight="495.0" prefWidth="500.0" styleClass="text-area" />
+                        <Label layoutX="23.0" layoutY="96.0" prefHeight="27.0" prefWidth="105.0" text="# Instance" textFill="#ffd400">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="436.0" layoutY="96.0" prefHeight="30.0" prefWidth="91.0" text="# Items" textFill="#ffd400">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="847.0" layoutY="96.0" prefHeight="30.0" prefWidth="254.0" text="# Regles d'associations" textFill="#ffd400">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </content>

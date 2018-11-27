@@ -41,7 +41,7 @@ public class DataSet {
 				// on recherche les lignes ou les attributs sont décris
 				if (ligne != null) {
 					while (ligne != null) {
-						AprioriAlgo.out += ligne +"\n";
+						AprioriAlgo.outInstance += ligne +"\n";
 						String[] TabL = ligne.split(",");
 						row rowTemp = new row();
 						for (String s : TabL) {
@@ -57,16 +57,13 @@ public class DataSet {
 						}
 						Data.Contenu.add(rowTemp);
 						ligne = br.readLine();
-
 					}
 				}
 				br.close();
 			}}
 		catch(Exception e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
-
-
 
 		return Data;
 	}

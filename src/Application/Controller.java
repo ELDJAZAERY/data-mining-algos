@@ -159,10 +159,16 @@ public class Controller {
     private TextField support ;
 
     @FXML
-    private TextArea out;
+    private TextArea outInstance;
 
     @FXML
-    private Button process;
+    private TextArea outItems;
+
+    @FXML
+    private TextArea outRegles;
+
+    @FXML
+    private Label Time;
 
 
     @FXML
@@ -376,10 +382,23 @@ public class Controller {
 
     @FXML
     void process(){
-        String file = path+"Apriori/"+combobox2.getValue();
-        AprioriAlgo.process(file);
-        out.setText(AprioriAlgo.out);
+        Thread th = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String file = path+"Apriori/"+combobox2.getValue();
+                AprioriAlgo.process(file);
+
+                outItems.setText(""); outInstance.setText(""); outRegles.setText("");
+
+                outInstance.setText(AprioriAlgo.outInstance);
+                outItems.setText(AprioriAlgo.outItems);
+                outRegles.setText(AprioriAlgo.outRegles);
+            }
+        });
+
+        th.start();
     }
+
 
 }
 

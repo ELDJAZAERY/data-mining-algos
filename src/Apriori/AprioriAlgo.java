@@ -9,21 +9,23 @@ public class AprioriAlgo {
 
 	public static int NC = 75 , SUPPORT = 100 ;
 
-	public static String out = "";
+	public static String outInstance = "";
+	public static String outItems = "";
+	public static String outRegles = "";
+	public static String Time = "";
 
 
 	public static void process(String path){
-		out = "";
+		outInstance = Time = outItems = outRegles = "";
 		long startTime = System.currentTimeMillis();
 
 
 		DataSet DataS= DataSet.RecupDonnees(path);
 		AprioriAlgo.ExtractionItems(DataS,NC,SUPPORT);
 
-		long endTime = (System.currentTimeMillis()-startTime)/1000 ;
-		out += "Le temps d'exécution est : "+endTime+"secondes";
+		long time = (System.currentTimeMillis()-startTime)/1000 ;
+		Time = ""+time;
 
-		System.out.println(out);
 	}
 
 
@@ -34,7 +36,7 @@ public class AprioriAlgo {
 		HashSet<ArrayList<String>> itemsTuplePris= new HashSet<ArrayList<String>>();
 		HashSet<ArrayList<String>> itemsTuplePrisSauv= new HashSet<ArrayList<String>>();
 
-		out += ("\n\n\n ------------------ Liste des items C1: ------------------------ \n");
+		outItems += ("\t ----- Liste des items C1: ----- \n");
 		String line="";
 		//********************************************niveau un********************************
 		for(row r: Data.Contenu)
@@ -56,7 +58,7 @@ public class AprioriAlgo {
 
 				}
 			}
-			out += (i+" : \t"+cpt+"\n");
+			outItems += (i+" : \t"+cpt+"\n");
 			if(cpt>support)
 			{ 	ArrayList<String> l =new ArrayList<String>();
 				l.add(i);
@@ -64,18 +66,19 @@ public class AprioriAlgo {
 
 			}
 		}
-			out += ("\n\n\n ---------------------->  Liste des items pris:  \n");
+
+		outItems += ("\n\n\t ### Liste des items pris:  \n");
 		cpt=1;
 		for(ArrayList<String> item:itemsTuplePris)
 		{
-				out += ("Item "+cpt+":\t"+item.get(0)+"\n");
+			outItems += ("Item "+cpt+":\t"+item.get(0)+"\n");
 			cpt++;}
 
-		//********************************************construction des autres niveaux ********************************
+		//******************************************** construction des autres niveaux ********************************
 
 		while((itemsTuplePris.size()!=1)&&(itemsTuplePris.size()!=0))
 		{
-			out += (" Liste des items C"+niv+":  \n");
+			outItems += ("\n\n Liste des items C"+niv+":  \n");
 			int deb=1;
 			Object[] Tab=(Object[]) itemsTuplePris.toArray();
 			itemsTuple=new HashSet<ArrayList<String>>();
@@ -119,7 +122,7 @@ public class AprioriAlgo {
 						cpt++;
 					}
 				}
-					out += (line.substring(0,line.length()-2)+") :\t "+cpt+"\n");
+				outItems += (line.substring(0,line.length()-2)+") :\t "+cpt+"\n");
 				if(cpt>support)
 				{
 					itemsTuplePris.add(l);
@@ -128,27 +131,28 @@ public class AprioriAlgo {
 
 
 			}
-			out += ("\n\n\n -------------------> Liste des items C"+niv+" pris: \n ");
+			outItems += ("\n\n\t ### Liste des items C"+niv+" pris: \n ");
 			cpt=1;
 
 			for(ArrayList<String> l:itemsTuplePris)
 			{	line=" (";
 				for(String el: l )
 				{   line= line+el+" , ";}
-				//out += ("Item "+cpt+":\t"+line.substring(0,line.length()-2)+")\n");
+				outItems += ("Item "+cpt+":\t"+line.substring(0,line.length()-2)+")\n");
 				cpt++;}
 			niv++;
 		}
+
 		//**************************************Regles d'association***************************************
 		itemsTuple= new HashSet<ArrayList<String>>();
 		if(itemsTuplePris.size()==0){
 			itemsTuplePris=itemsTuplePrisSauv;}
-		out += ("\n\n\n\n ####### ************ Les Régles d'association ************ ######## \n ");
 		ArrayList<RegleAsso> RegleAssoc= new ArrayList<RegleAsso>();
 
 		int trace=0;
 		for(ArrayList<String> l:itemsTuplePris)	// pour chaque item candidat
 		{
+			outRegles += ("\t ## Les Régles d'association ## \n ");
 			for(String item: l)
 			{
 				ArrayList<String> tempor= new ArrayList<String>();
@@ -246,10 +250,10 @@ public class AprioriAlgo {
 					PD=PD+d+" ,";
 				}
 
-				out += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" :\t"+nivConf+" %\n ");
+				outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" :\t"+nivConf+" %\n ");
 			}
 
-			out += ("\n\n\n ############# ************ Les Régles d'association prises ************ ######### \n ");
+			outRegles += ("\n\n\t ## Les Régles d'association prises ## \n ");
 			for(RegleAsso R:RegleAssocPrises)
 			{
 				String PG="";
@@ -263,9 +267,10 @@ public class AprioriAlgo {
 					PD=PD+d+" ,";
 				}
 
-					out += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" \n ");
+				outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" \n ");
 			}
 
+			outRegles +="\n\n";
 
 		}
 
