@@ -168,7 +168,7 @@ public class Controller {
     private TextArea outRegles;
 
     @FXML
-    private Label Time;
+    private TextField Time;
 
 
     @FXML
@@ -388,11 +388,12 @@ public class Controller {
                 String file = path+"Apriori/"+combobox2.getValue();
                 AprioriAlgo.process(file);
 
-                outItems.setText(""); outInstance.setText(""); outRegles.setText("");
+                outItems.setText(""); outInstance.setText(""); outRegles.setText(""); Time.setText("");
 
                 outInstance.setText(AprioriAlgo.outInstance);
                 outItems.setText(AprioriAlgo.outItems);
                 outRegles.setText(AprioriAlgo.outRegles);
+                Time.setText(AprioriAlgo.Time);
             }
         });
 
