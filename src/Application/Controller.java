@@ -2,6 +2,7 @@ package Application;
 
 
 import Algos.Apriori.AprioriAlgo;
+import Algos.KNN.KnnParams;
 import DMweKa.Application.BoxPlot;
 import DMweKa.Application.DynamicTableFx;
 import DMweKa.Application.TableFx;
@@ -19,12 +20,18 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import weka.classifiers.Classifier;
+import weka.classifiers.Evaluation;
+import weka.classifiers.lazy.IBk;
+import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 
 import java.io.File;
 import java.util.Map;
 import java.util.TreeMap;
+
+
 
 
 /**
@@ -150,11 +157,13 @@ public class Controller {
      * */
 
     @FXML
-    private ComboBox<String> combobox2;
+    private ComboBox<String> comboBoxAlgos;
 
 
     @FXML
     private TextField param1 ;
+    @FXML
+    private Label lableParam1;
     @FXML
     private TextArea out1;
     @FXML
@@ -164,6 +173,8 @@ public class Controller {
     @FXML
     private TextField param2 ;
     @FXML
+    private Label lableParam2;
+    @FXML
     private TextArea out2;
     @FXML
     private Label labelOut2;
@@ -171,7 +182,8 @@ public class Controller {
 
     @FXML
     private TextField Time;
-
+    @FXML
+    private ProgressIndicator progress;
 
 
     @FXML
@@ -203,7 +215,7 @@ public class Controller {
             for (File f : fileList) {
                 combobox.getItems().add(f.getName());
             }
-            if(fileList.length > 0) { combobox.setValue(fileList[0].getName()); afficheInstance();}
+            if(fileList.length >= 1) { combobox.setValue(fileList[1].getName()); afficheInstance();}
         }
 
         pane.setCenter(swingNode);
@@ -212,10 +224,10 @@ public class Controller {
 
         /***  ALGOS ***/
 
-        combobox2.getItems().add("Apriori");
-        combobox2.getItems().add("KNN");
+        comboBoxAlgos.getItems().add("Apriori");
+        comboBoxAlgos.getItems().add("KNN");
 
-        combobox2.setValue("Apriori");
+        comboBoxAlgos.setValue("Apriori");
 
 
         // force int input from confiance and support
@@ -225,8 +237,10 @@ public class Controller {
                  if (!newValue.matches("\\d*")) {
                      param1.setText(newValue.replaceAll("[^\\d]", ""));
                  }else {
-                     if(!param1.getText().isEmpty())
-                        AprioriAlgo.NC = Integer.valueOf(param1.getText());
+                     if(!param1.getText().isEmpty()){
+                         AprioriAlgo.NC = Integer.valueOf(param1.getText());
+                         KnnParams.percent_TrainData = Integer.valueOf(param1.getText());
+                     }
                  }
              }
         });
@@ -237,8 +251,27 @@ public class Controller {
                 if (!newValue.matches("\\d*")) {
                     param2.setText(newValue.replaceAll("[^\\d]", ""));
                 } else {
-                    if(!param2.getText().isEmpty())
+                    if(!param2.getText().isEmpty()){
                         AprioriAlgo.SUPPORT = Integer.valueOf(param2.getText());
+                        KnnParams.K = Integer.valueOf(param2.getText());
+                    }
+                }
+            }
+        });
+
+        comboBoxAlgos.valueProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue.equals("Apriori")){
+                    lableParam1.setText("Confiance");
+                    lableParam2.setText("Support");
+                    labelOut1.setText("# Items");
+                    labelOut2.setText("# Regles d'associations");
+                }else{
+                    lableParam1.setText("% Training");
+                    lableParam2.setText("K Voisins");
+                    labelOut1.setText("# Real Class Instances");
+                    labelOut2.setText("# Predit Class Instances");
                 }
             }
         });
@@ -261,10 +294,10 @@ public class Controller {
             dataSet = new DataSet(instances);
 
             afficheFileContent();
-            if(PreProcessing.missing.size()>0) {
+            if(PreProcessing.isMissing) {
                 missingvalueTab.setDisable(false);
                 missingValueRelation.setText(dataSet.relation());
-                //affichemissingValues();
+                affichemissingValues();
             }
             else missingvalueTab.setDisable(true);
 
@@ -277,7 +310,7 @@ public class Controller {
             /** Show Attribut's Names and types in the Table Fx */
             showAttributsNames();
 
-            new BoxPlot(fileName,instances,swingNode);
+            new BoxPlot(fileName,dataSet.insts,swingNode);
 
         }catch (Exception e) {
             e.printStackTrace();
@@ -339,7 +372,7 @@ public class Controller {
 
     public void affichemissingValues(){
         try {
-            missingValuesTable = DynamicTableFx.missingValueToTableView(PreProcessing.missing,dataSet,missingValuesTable);
+            missingValuesTable = DynamicTableFx.instqncesToTableView(dataSet.prutInst,missingValuesTable);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -378,22 +411,105 @@ public class Controller {
 
     /*** ALGOS **/
 
+
+    boolean mutex = false;
     @FXML
     void process(){
+        if(mutex){ System.out.println("BUZZY !! "); return;}
+        progress.setProgress(0f);
+
+        mutex = true;
         Thread th = new Thread(new Runnable() {
             @Override
             public void run() {
-                AprioriAlgo.process(dataSet);
-
                 out1.setText(""); out2.setText(""); Time.setText("");
+                progress.setProgress(0.38f);
 
-                out1.setText(AprioriAlgo.outItems);
-                out2.setText(AprioriAlgo.outRegles);
-                Time.setText(AprioriAlgo.Time);
+                if(comboBoxAlgos.getValue().equals("Apriori")){
+                    AprioriAlgo.process(dataSet);
+                    out1.setText(AprioriAlgo.outItems);
+                    out2.setText(AprioriAlgo.outRegles);
+                    Time.setText(AprioriAlgo.Time);
+                }else{
+                    KNN();
+                }
+
+                progress.setProgress(1.00);
+                mutex = false;
             }
         });
 
         th.start();
+    }
+
+
+    void KNN() {
+        try{
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path+fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances);
+            Instances data = dset.insts;
+
+            String realOut , preditOut ;
+
+            int correct = 0 , incorrect = 0 ;
+
+            Instances trainData = data , testData = data ;
+
+            int index = data.size() * (KnnParams.percent_TrainData / 100);
+
+            // Training Data
+            for(int i=index;i<data.size();i++){
+                trainData.remove(i);
+            }
+
+            // Test Data
+            for(int i=0;i<index;i++){
+                testData.remove(i);
+            }
+
+
+            // class index
+            data.setClassIndex(data.numAttributes() - 1);
+
+            //k - the number of nearest neighbors to use for prediction
+            Classifier ibk = new IBk(KnnParams.K);
+            ibk.buildClassifier(trainData);
+
+            Evaluation eval = new Evaluation(testData);
+            eval.evaluateModel(ibk, testData);
+
+            realOut = "####  Real Class Instances  ####\n";
+            preditOut = "####  predit Class Instances  ####\n";
+
+            String sinst ;
+            for(Instance inst:testData){
+                sinst = inst.toString();
+                realOut += sinst+"\n";
+                inst.setClassValue(ibk.classifyInstance(inst));
+                if(sinst.equals(inst.toString())) correct++; else incorrect++;
+                preditOut += inst.toString()+"\n";
+            }
+
+            preditOut += "\n\n#### KNN Stats  ####";
+            preditOut += "\n\n Total       : " + (int) eval.numInstances() +"\n";
+            preditOut += "\n\n Correct     : " + correct +"\n";
+            preditOut += "\n\n Incorrect   : " + incorrect +"\n";
+            preditOut += "\n\n Erreur Rate : " + eval.errorRate() +"\n";
+
+            out1.setText(realOut);
+            out2.setText(preditOut);
+
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+            Time.setText(""+time);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 

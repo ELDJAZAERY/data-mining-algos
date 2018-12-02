@@ -23,7 +23,6 @@ public class DynamicTableFx {
     //TABLE VIEW AND DATA
 
     public static TableView instqncesToTableView(Instances instances , TableView tableview){
-
         int maxNbAttributs = 100 ;
         ObservableList<ObservableList> data = FXCollections.observableArrayList();
         tableview.getColumns().clear();
@@ -158,4 +157,7 @@ public class DynamicTableFx {
         tableview.setItems(data);
         return tableview;
     }
+
+
+
 }

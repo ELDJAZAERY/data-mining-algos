@@ -40,7 +40,6 @@ public class DataSet {
 
 
 	public static DataSet RecupDonnees(String NomFichier){
-
 		DataSet Data= new DataSet();
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(new File(NomFichier)));
@@ -86,7 +85,7 @@ public class DataSet {
 		DataSet Data= new DataSet();
 
 		for(Instance inst:instances){
-			if(inst.hasMissingValue()) continue;
+			//if(inst.hasMissingValue()) continue;
 			row rowTemp = new row();
 			for(int i=0;i<nbAttributs;i++){
 				if(inst.attribute(i).isNumeric() && !inst.attribute(i).isDate()){
@@ -99,6 +98,5 @@ public class DataSet {
 		}
 		return Data;
 	}
-
 
 }

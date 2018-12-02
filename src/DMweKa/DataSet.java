@@ -31,11 +31,13 @@ public class DataSet {
 
 
     public Instances insts;
+    public Instances prutInst;
 
     public DataSet(Instances data) {
 
+        prutInst = data;
         // Replace Missing values !!
-        data = PreProcessing.preProcessData(data);
+        data = PreProcessing.preProcess(data);
         insts = data;
 
         instances = new ArrayList<>(data);
