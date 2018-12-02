@@ -1,7 +1,7 @@
 package Application;
 
 
-import Apriori.AprioriAlgo;
+import Algos.Apriori.AprioriAlgo;
 import DMweKa.Application.BoxPlot;
 import DMweKa.Application.DynamicTableFx;
 import DMweKa.Application.TableFx;
@@ -145,30 +145,33 @@ public class Controller {
 
     /**
         ALGOS
-        Apriori
+        Algos.Apriori
      *
      * */
 
     @FXML
     private ComboBox<String> combobox2;
 
-    @FXML
-    private TextField confiance ;
 
     @FXML
-    private TextField support ;
+    private TextField param1 ;
+    @FXML
+    private TextArea out1;
+    @FXML
+    private Label labelOut1;
+
 
     @FXML
-    private TextArea outInstance;
-
+    private TextField param2 ;
     @FXML
-    private TextArea outItems;
-
+    private TextArea out2;
     @FXML
-    private TextArea outRegles;
+    private Label labelOut2;
+
 
     @FXML
     private TextField Time;
+
 
 
     @FXML
@@ -207,38 +210,35 @@ public class Controller {
 
 
 
-        /***  ALGOS */
+        /***  ALGOS ***/
 
-        repo = new File(path+"Apriori");
-        if (repo.isDirectory()) {
-            File[] fileList = repo.listFiles();
-            for (File f : fileList) {
-                combobox2.getItems().add(f.getName());
-            }
-            if(fileList.length > 0) { combobox2.setValue(fileList[0].getName());}
-        }
+        combobox2.getItems().add("Apriori");
+        combobox2.getItems().add("KNN");
+
+        combobox2.setValue("Apriori");
+
 
         // force int input from confiance and support
-        confiance.textProperty().addListener(new ChangeListener<String>() {
+        param1.textProperty().addListener(new ChangeListener<String>() {
              @Override
              public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                  if (!newValue.matches("\\d*")) {
-                     confiance.setText(newValue.replaceAll("[^\\d]", ""));
+                     param1.setText(newValue.replaceAll("[^\\d]", ""));
                  }else {
-                     if(!confiance.getText().isEmpty())
-                        AprioriAlgo.NC = Integer.valueOf(confiance.getText());
+                     if(!param1.getText().isEmpty())
+                        AprioriAlgo.NC = Integer.valueOf(param1.getText());
                  }
              }
         });
 
-        support.textProperty().addListener(new ChangeListener<String>() {
+        param2.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 if (!newValue.matches("\\d*")) {
-                    support.setText(newValue.replaceAll("[^\\d]", ""));
+                    param2.setText(newValue.replaceAll("[^\\d]", ""));
                 } else {
-                    if(!support.getText().isEmpty())
-                        AprioriAlgo.SUPPORT = Integer.valueOf(support.getText());
+                    if(!param2.getText().isEmpty())
+                        AprioriAlgo.SUPPORT = Integer.valueOf(param2.getText());
                 }
             }
         });
@@ -345,7 +345,6 @@ public class Controller {
         }
     }
 
-
     public void barchar(AttributDataSet attribut){
         TreeMap<Double,Integer> labelWeight = attribut.getLabelsAndWeightNum();
         TreeMap<String,Integer> labelWeightNom = attribut.getLabelsAndWeightNom();
@@ -377,7 +376,6 @@ public class Controller {
     }
 
 
-
     /*** ALGOS **/
 
     @FXML
@@ -385,14 +383,12 @@ public class Controller {
         Thread th = new Thread(new Runnable() {
             @Override
             public void run() {
-                String file = path+"Apriori/"+combobox2.getValue();
-                AprioriAlgo.process(file);
+                AprioriAlgo.process(dataSet);
 
-                outItems.setText(""); outInstance.setText(""); outRegles.setText(""); Time.setText("");
+                out1.setText(""); out2.setText(""); Time.setText("");
 
-                outInstance.setText(AprioriAlgo.outInstance);
-                outItems.setText(AprioriAlgo.outItems);
-                outRegles.setText(AprioriAlgo.outRegles);
+                out1.setText(AprioriAlgo.outItems);
+                out2.setText(AprioriAlgo.outRegles);
                 Time.setText(AprioriAlgo.Time);
             }
         });

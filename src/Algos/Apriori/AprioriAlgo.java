@@ -1,4 +1,6 @@
-package Apriori;
+package Algos.Apriori;
+
+import Algos.DataSet;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,8 +27,21 @@ public class AprioriAlgo {
 
 		long time = (System.currentTimeMillis()-startTime)/1000 ;
 		Time = ""+time;
-
 	}
+
+
+	public static void process(DMweKa.DataSet data){
+		outInstance = Time = outItems = outRegles = "";
+		long startTime = System.currentTimeMillis();
+
+
+		DataSet DataS = DataSet.RecupDonnees(data);
+		AprioriAlgo.ExtractionItems(DataS,NC,SUPPORT);
+
+		long time = (System.currentTimeMillis()-startTime)/1000 ;
+		Time = ""+time;
+	}
+
 
 
 	public static void ExtractionItems(DataSet Data,int NC,int support)
@@ -40,7 +55,6 @@ public class AprioriAlgo {
 		String line="";
 		//********************************************niveau un********************************
 		for(row r: Data.Contenu)
-
 		{
 			for (String el : r.set )
 			{
@@ -63,7 +77,6 @@ public class AprioriAlgo {
 			{ 	ArrayList<String> l =new ArrayList<String>();
 				l.add(i);
 				itemsTuplePris.add(l);
-
 			}
 		}
 
@@ -250,7 +263,8 @@ public class AprioriAlgo {
 					PD=PD+d+" ,";
 				}
 
-				outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" :\t"+nivConf+" %\n ");
+				if(PG.length() > 0 && PD.length() > 0)
+					outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" :\t"+nivConf+" %\n ");
 			}
 
 			outRegles += ("\n\n\t ## Les Régles d'association prises ## \n ");
@@ -267,11 +281,11 @@ public class AprioriAlgo {
 					PD=PD+d+" ,";
 				}
 
-				outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" \n ");
+				if(PG.length() > 0 && PD.length() > 0)
+					outRegles += (PG.substring(0,PG.length()-1)+"====>"+PD.substring(0,PD.length()-1)+" \n ");
 			}
 
 			outRegles +="\n\n";
-
 		}
 
 

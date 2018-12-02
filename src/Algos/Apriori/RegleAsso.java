@@ -1,4 +1,4 @@
-package Apriori;
+package Algos.Apriori;
 
 import java.util.HashSet;
 

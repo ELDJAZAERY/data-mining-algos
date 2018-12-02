@@ -29,10 +29,14 @@ public class DataSet {
     private int nbInstances ;
     private int nbAttributs ;
 
+
+    public Instances insts;
+
     public DataSet(Instances data) {
 
         // Replace Missing values !!
         data = PreProcessing.preProcessData(data);
+        insts = data;
 
         instances = new ArrayList<>(data);
         relation = data.relationName();
@@ -46,8 +50,7 @@ public class DataSet {
             listAttributs.add(data.attribute(i).name());
         }
 
-        //PreProcessing.normaizeNumeric(this);
-
+        PreProcessing.normaizeNumeric(this);
     }
 
     public ArrayList<AttributDataSet> getAttributs() {
@@ -97,11 +100,5 @@ public class DataSet {
         }
         return items;
     }
-
-
-    public void toTableFx(){
-        // TODO
-    }
-
 
 }

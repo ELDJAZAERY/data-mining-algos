@@ -1,10 +1,10 @@
-package Apriori;
+package Algos.Apriori;
 
 import java.util.Vector;
 
 public class row {
 	
-	Vector<String> set= new Vector<String>();
+	public Vector<String> set= new Vector<String>();
 
 	public Vector<String> getSet() {
 		return set;
