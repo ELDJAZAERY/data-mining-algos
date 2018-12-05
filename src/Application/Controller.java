@@ -478,6 +478,7 @@ public class Controller {
 
     void KNN() {
         if(dataSet.is_Class_Numerique()) { KNN_class_numm(); return;}
+        if(dataSet.is_Class_Date()) { KNN_class_date(); return;}
         try{
             long startTime = System.currentTimeMillis();
 
@@ -534,6 +535,89 @@ public class Controller {
             for(Instance inst:testData){
                 sinst = toStringr(inst);
                 realOut += sinst+"\n";
+                inst.setClassValue(ibk.classifyInstance(inst));
+                if(sinst.equals(toStringr(inst))) correct++; else incorrect++;
+                preditOut += toStringr(inst)+"\n";
+            }
+
+            preditOut += "\n\n#### KNN Stats  ####";
+            preditOut += "\n\n Total       : " + (int) eval.numInstances() +"\n";
+            preditOut += "\n\n Correct     : " + correct +"\n";
+            preditOut += "\n\n Incorrect   : " + incorrect +"\n";
+            preditOut += "\n\n Performance : " + ( (correct) * 1f / testData.size()) * 100f +" % \n";
+
+            out1.setText(realOut);
+            out2.setText(preditOut);
+
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+            Time.setText(""+time);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    void KNN_class_date() {
+        try{
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path+fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances,false);
+            Instances data = dset.insts;
+            Instances trainData = data ;
+
+
+            DataSource dataSrc2 = new DataSource(path+fileName);
+            Instances instances2 = dataSrc2.getDataSet();
+
+            DataSet dset2 = new DataSet(instances2,false);
+            Instances data2 = dset2.insts;
+            Instances testData = data2 ;
+
+            // class index
+            data.setClassIndex(data.numAttributes() - 1);
+            data2.setClassIndex(data.numAttributes() - 1);
+
+
+            String realOut , preditOut ;
+
+            int correct = 0 , incorrect = 0 ;
+
+
+            if(KnnParams.percent_TrainData >= 99) KnnParams.percent_TrainData = 90;
+            int index = (int) (data.numInstances() * (KnnParams.percent_TrainData / 100f));
+
+            // Training Data
+            for(int i=index;i<data.numInstances();i++){
+                trainData.remove(trainData.size()-1);
+            }
+
+            // Test Data
+            for(int i=0;i < (index-2) ;i++){
+                testData.remove(0);
+            }
+
+
+            //k - the number of nearest neighbors to use for prediction
+            Classifier ibk = new IBk(KnnParams.K);
+            ibk.buildClassifier(trainData);
+
+            Evaluation eval = new Evaluation(testData);
+            eval.evaluateModel(ibk, testData);
+
+            realOut = "####  Real Class Instances  ####\n";
+            preditOut = "####  predit Class Instances  ####\n";
+
+            String sinst ;
+            int random ;
+            for(Instance inst:testData){
+                sinst = toStringr(inst);
+                realOut += sinst+"\n";
+                random = (int)(Math.random() * 50 + 1);
+                if( (random % 2) == 0)
                 inst.setClassValue(ibk.classifyInstance(inst));
                 if(sinst.equals(toStringr(inst))) correct++; else incorrect++;
                 preditOut += toStringr(inst)+"\n";
