@@ -35,7 +35,6 @@ public class KNN_Implementation {
 
 		else {
 			// if user selecting invalid options then they must select correct option.
-			System.out.println("Invalid Selection");
 			getKValueandDistMetrics();
 			distanceCalcualte();
 		}
@@ -74,19 +73,15 @@ public class KNN_Implementation {
 			 * writing to output file.
 			 */
 			if (IR_Setsosa > IR_Versicolor && IR_Setsosa > IR_Virginica) {
-				//System.out.println("Iris_Sestosa=" + IR_Setsosa);
 				pw.println("Iris-setosa");
 
 			} else if (IR_Versicolor > IR_Setsosa && IR_Versicolor > IR_Virginica) {
-				//System.out.println("Iris_Versicolor=" + IR_Versicolor);
-				pw.println("Iris-versicolor");
 			}
 
 			else if (IR_Virginica > IR_Setsosa && IR_Virginica > IR_Versicolor) {
-				//System.out.println("Iris_Virginica=" + IR_Virginica);
-				pw.println("Iris-virginica");
 			}
 		}
+		KnnParams.cluster = null;
 		pw.close();
 	}
 
@@ -123,16 +118,13 @@ public class KNN_Implementation {
 			 */
 
 			if (IR_Setsosa > IR_Versicolor && IR_Setsosa > IR_Virginica) {
-				System.out.println("Iris_Sestosa=" + IR_Setsosa);
 				pw.println("Iris-setosa");
 
 			} else if (IR_Versicolor > IR_Setsosa && IR_Versicolor > IR_Virginica) {
-				System.out.println("Iris_Versicolor=" + IR_Versicolor);
 				pw.println("Iris-versicolor");
 			}
 
 			else if (IR_Virginica > IR_Setsosa && IR_Virginica > IR_Versicolor) {
-				System.out.println("Iris_virginica=" + IR_Virginica);
 				pw.println("Iris-virginica");
 			}
 		}
@@ -145,16 +137,12 @@ public class KNN_Implementation {
 
 	void getKValueandDistMetrics() {
 
-		System.out.println("Enter the K value of KNN ");
 		knn_value = sc.nextInt();
 		// Restricted k value less 50.
 		if (knn_value > 50) {
-			System.out.println("K Value is out of range.");
 			getKValueandDistMetrics();
 		} else {
 
-			System.out.println(
-					"Select below distance metric(1 or 2)\n1 Eucildean Distance Metrics\n2 Manhanttan Distance Metrics");
 			DistanceMetricsSelction = sc.nextInt();
 
 		}

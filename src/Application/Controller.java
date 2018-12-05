@@ -28,6 +28,7 @@ import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -41,6 +42,10 @@ import java.util.TreeMap;
 
 
 public class Controller {
+
+    // Distraction de classes numerique
+    private int nbClass = 0 ;
+
 
     private final String path = "data/";
     private DataSet dataSet;
@@ -226,6 +231,7 @@ public class Controller {
 
         comboBoxAlgos.getItems().add("Apriori");
         comboBoxAlgos.getItems().add("KNN");
+        //comboBoxAlgos.getItems().add("KNN classifieur");
 
         comboBoxAlgos.setValue("Apriori");
 
@@ -263,15 +269,37 @@ public class Controller {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 if(newValue.equals("Apriori")){
+                    lableParam1.setVisible(true);
+                    lableParam2.setVisible(true);
+                    param1.setVisible(true);
+                    param2.setVisible(true);
+
                     lableParam1.setText("Confiance");
                     lableParam2.setText("Support");
                     labelOut1.setText("# Items");
                     labelOut2.setText("# Regles d'associations");
-                }else{
+                    out1.setEditable(false);
+                }else if(newValue.equals("KNN")){
+                    lableParam1.setVisible(true);
+                    lableParam2.setVisible(true);
+                    param1.setVisible(true);
+                    param2.setVisible(true);
+
                     lableParam1.setText("% Training");
                     lableParam2.setText("K Voisins");
                     labelOut1.setText("# Real Class Instances");
                     labelOut2.setText("# Predit Class Instances");
+                    out1.setEditable(false);
+                }else{
+                    lableParam1.setVisible(false);
+                    lableParam2.setVisible(false);
+                    param1.setVisible(false);
+                    param2.setVisible(false);
+
+                    labelOut1.setText("# Real Class Instance");
+                    labelOut2.setText("# Predit Class Instance");
+
+                    out1.setEditable(true);
                 }
             }
         });
@@ -291,7 +319,7 @@ public class Controller {
             // affiche les attributs telqu'elles
             DynamicTableFx.instqncesToTableView(instances,missingValuesTable);
 
-            dataSet = new DataSet(instances);
+            dataSet = new DataSet(instances,true);
 
             afficheFileContent();
             if(PreProcessing.isMissing) {
@@ -422,16 +450,20 @@ public class Controller {
         Thread th = new Thread(new Runnable() {
             @Override
             public void run() {
-                out1.setText(""); out2.setText(""); Time.setText("");
+                out2.setText(""); Time.setText("");
                 progress.setProgress(0.38f);
 
                 if(comboBoxAlgos.getValue().equals("Apriori")){
+                    out1.setText("");
                     AprioriAlgo.process(dataSet);
                     out1.setText(AprioriAlgo.outItems);
                     out2.setText(AprioriAlgo.outRegles);
                     Time.setText(AprioriAlgo.Time);
-                }else{
+                }else if(comboBoxAlgos.getValue().equals("KNN")){
+                    out1.setText("");
                     KNN();
+                }else{
+                    KNN_Classe();
                 }
 
                 progress.setProgress(1.00);
@@ -443,7 +475,9 @@ public class Controller {
     }
 
 
+
     void KNN() {
+        if(dataSet.is_Class_Numerique()) { KNN_class_numm(); return;}
         try{
             long startTime = System.currentTimeMillis();
 
@@ -451,7 +485,229 @@ public class Controller {
             DataSource dataSrc = new DataSource(path+fileName);
             Instances instances = dataSrc.getDataSet();
 
-            DataSet dset = new DataSet(instances);
+            DataSet dset = new DataSet(instances,false);
+            Instances data = dset.insts;
+            Instances trainData = data ;
+
+
+            DataSource dataSrc2 = new DataSource(path+fileName);
+            Instances instances2 = dataSrc2.getDataSet();
+
+            DataSet dset2 = new DataSet(instances2,false);
+            Instances data2 = dset2.insts;
+            Instances testData = data2 ;
+
+            String realOut , preditOut ;
+
+            int correct = 0 , incorrect = 0 ;
+
+
+            if(KnnParams.percent_TrainData >= 99) KnnParams.percent_TrainData = 90;
+            int index = (int) (data.numInstances() * (KnnParams.percent_TrainData / 100f));
+
+            // Training Data
+            for(int i=index;i<data.numInstances();i++){
+                trainData.remove(trainData.size()-1);
+            }
+
+            // Test Data
+            for(int i=0;i < (index-2) ;i++){
+                testData.remove(0);
+            }
+
+
+            // class index
+            data.setClassIndex(data.numAttributes() - 1);
+            data2.setClassIndex(data.numAttributes() - 1);
+
+            //k - the number of nearest neighbors to use for prediction
+            Classifier ibk = new IBk(KnnParams.K);
+            ibk.buildClassifier(trainData);
+
+            Evaluation eval = new Evaluation(testData);
+            eval.evaluateModel(ibk, testData);
+
+            realOut = "####  Real Class Instances  ####\n";
+            preditOut = "####  predit Class Instances  ####\n";
+
+            String sinst ;
+            for(Instance inst:testData){
+                sinst = toStringr(inst);
+                realOut += sinst+"\n";
+                inst.setClassValue(ibk.classifyInstance(inst));
+                if(sinst.equals(toStringr(inst))) correct++; else incorrect++;
+                preditOut += toStringr(inst)+"\n";
+            }
+
+            preditOut += "\n\n#### KNN Stats  ####";
+            preditOut += "\n\n Total       : " + (int) eval.numInstances() +"\n";
+            preditOut += "\n\n Correct     : " + correct +"\n";
+            preditOut += "\n\n Incorrect   : " + incorrect +"\n";
+            preditOut += "\n\n Performance : " + ( (correct) * 1f / testData.size()) * 100f +" % \n";
+
+            out1.setText(realOut);
+            out2.setText(preditOut);
+
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+            Time.setText(""+time);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    void KNN_class_numm() {
+        try{
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path+fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances,false);
+            Instances data = dset.insts;
+            Instances trainData = data ;
+
+
+            DataSource dataSrc2 = new DataSource(path+fileName);
+            Instances instances2 = dataSrc2.getDataSet();
+
+            DataSet dset2 = new DataSet(instances2,false);
+            Instances data2 = dset2.insts;
+            Instances testData = data2 ;
+
+
+            double max = dset.classAttribut().valmax();
+            double min = dset.classAttribut().valmin();
+
+            int nombre_class = (nbClass == 0) ? ((max - min) < 1000 ) ? 5 : 10  : nbClass ;
+            double step = ( (max - min) / nombre_class) + 1 ;
+
+            ArrayList<String> classes = new ArrayList<>();
+
+            int bornINF , bornSup ;
+
+            bornSup = (int) (min + step);
+            classes.add(""+min+" - "+bornSup);
+
+            for(int i = 1 ; i < nombre_class ; i++){
+                bornINF = bornSup;
+                bornSup = (int) (bornINF + step);
+                classes.add(""+bornINF+" - "+bornSup);
+            }
+
+            int classvalue , classindex;
+            for(Instance inst:data){
+                classvalue = (int) inst.classValue();
+                classindex = (int) (classvalue / step);
+
+                inst.setClassValue(classindex);
+            }
+
+            for(Instance inst:testData){
+                classvalue = (int) inst.classValue();
+                classindex = (int) (classvalue / step);
+
+                inst.setClassValue(classindex);
+            }
+
+            String realOut , preditOut ;
+
+            int correct = 0 , incorrect = 0 ;
+
+
+            if(KnnParams.percent_TrainData >= 99) KnnParams.percent_TrainData = 90;
+            int index = (int) (data.numInstances() * (KnnParams.percent_TrainData / 100f));
+
+
+            // Training Data
+            for(int i=index;i<data.numInstances();i++){
+                trainData.remove(trainData.size()-1);
+            }
+
+            // Test Data
+            for(int i=0;i < (index-2) ;i++){
+                testData.remove(0);
+            }
+
+
+            // class index
+            data.setClassIndex(data.numAttributes() - 1);
+            data2.setClassIndex(data.numAttributes() - 1);
+
+            //k - the number of nearest neighbors to use for prediction
+            Classifier ibk = new IBk(KnnParams.K);
+            ibk.buildClassifier(trainData);
+
+            Evaluation eval = new Evaluation(testData);
+            eval.evaluateModel(ibk, testData);
+
+            realOut = "####  Real Class Instances  ####\n";
+            preditOut = "####  predit Class Instances  ####\n";
+
+            String sinst , psinst ;
+            for(Instance inst:testData){
+                sinst = toStringr(inst,step,classes);
+                realOut += sinst+"\n";
+                inst.setClassValue(ibk.classifyInstance(inst));
+                psinst = toStringr(inst,step,classes);
+                if(sinst.equals(psinst)) correct++; else incorrect++;
+                preditOut += psinst+"\n";
+            }
+
+            preditOut += "\n\n#### KNN Stats  ####";
+            preditOut += "\n\n Total       : " + (int) eval.numInstances() +"\n";
+            preditOut += "\n\n Correct     : " + correct +"\n";
+            preditOut += "\n\n Incorrect   : " + incorrect +"\n";
+            preditOut += "\n\n Performance : " + ( (correct) * 1f / testData.size()) * 100f +" % \n";
+
+            out1.setText(realOut);
+            out2.setText(preditOut);
+
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+            Time.setText(""+time);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    String toStringr(Instance inst,double step,ArrayList classes){
+        String newInst = "";
+        String[] atts = inst.toString().split(",");
+
+        for(int i=0;i < atts.length-1 ; i++){
+            newInst += atts[i] + ",";
+        }
+
+        int classIndex = (int) inst.classValue() ;
+        if(classIndex >= classes.size()) classIndex = classes.size()-1;
+        newInst += " Class ==> " +classes.get(classIndex);
+        return newInst;
+    }
+
+
+    String toStringr(Instance inst){
+        String newInst = "";
+        String[] atts = inst.toString().split(",");
+
+        for(int i=0;i < atts.length-1 ; i++){
+            newInst += atts[i] + ",";
+        }
+
+        newInst += " Class ==> " +inst.stringValue(inst.numAttributes()-1);
+        return newInst;
+    }
+
+    void KNN_Classe() {
+        try{
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path+fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances,false);
             Instances data = dset.insts;
 
             String realOut , preditOut ;
@@ -460,7 +716,7 @@ public class Controller {
 
             Instances trainData = data , testData = data ;
 
-            int index = data.size() * (KnnParams.percent_TrainData / 100);
+            int index = data.size() * (50 / 100);
 
             // Training Data
             for(int i=index;i<data.size();i++){
@@ -475,31 +731,39 @@ public class Controller {
 
             // class index
             data.setClassIndex(data.numAttributes() - 1);
+            instances.setClassIndex(data.numAttributes() - 1);
 
             //k - the number of nearest neighbors to use for prediction
-            Classifier ibk = new IBk(KnnParams.K);
+            Classifier ibk = new IBk(1);
             ibk.buildClassifier(trainData);
 
-            Evaluation eval = new Evaluation(testData);
-            eval.evaluateModel(ibk, testData);
 
-            realOut = "####  Real Class Instances  ####\n";
-            preditOut = "####  predit Class Instances  ####\n";
+            Instance input = instances.get(0);
+            String[] stingInput = out1.getText().split(",");
 
-            String sinst ;
-            for(Instance inst:testData){
-                sinst = inst.toString();
-                realOut += sinst+"\n";
-                inst.setClassValue(ibk.classifyInstance(inst));
-                if(sinst.equals(inst.toString())) correct++; else incorrect++;
-                preditOut += inst.toString()+"\n";
+            if(stingInput.length != input.numAttributes()-1){
+                out2.setText("nomre d'attribut invalide");
+                return;
             }
 
-            preditOut += "\n\n#### KNN Stats  ####";
-            preditOut += "\n\n Total       : " + (int) eval.numInstances() +"\n";
-            preditOut += "\n\n Correct     : " + correct +"\n";
-            preditOut += "\n\n Incorrect   : " + incorrect +"\n";
-            preditOut += "\n\n Erreur Rate : " + eval.errorRate() +"\n";
+            for(int i=0;i<stingInput.length;i++){
+                if(input.attribute(i).isNumeric() && !input.attribute(i).isDate()){
+                    input.setValue(i,Double.parseDouble(stingInput[i]));
+                }else{
+                    input.setValue(i,stingInput[i]);
+                }
+            }
+
+            realOut = "####  Real Class Instance  ####\n";
+            preditOut = "####  predit Class Instance  ####\n";
+
+            for(Double d:ibk.distributionForInstance(input)){
+                System.out.println(d);
+            }
+
+            realOut += input.toString()+"\n";
+            input.setClassValue(ibk.classifyInstance(input));
+            preditOut += input.toString()+"\n";
 
             out1.setText(realOut);
             out2.setText(preditOut);
@@ -511,7 +775,6 @@ public class Controller {
         }
 
     }
-
 
 }
 

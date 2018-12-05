@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/KNN/KnnParams.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data/car_data.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DataSet.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DataSet.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/KNN/KnnAlgo.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$3.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$1.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$2.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$3.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/Application/DynamicTableFx.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/DataSet.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/DataSet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/PreProcessing.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/PreProcessing.class" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DataSet.java" afterPath="$PROJECT_DIR$/src/Algos/DataSet.java" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" afterPath="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/KNN/KnnParams.java" afterPath="$PROJECT_DIR$/src/Algos/KNN/KnnParams.java" />
       <change beforePath="$PROJECT_DIR$/src/Application/Controller.java" afterPath="$PROJECT_DIR$/src/Application/Controller.java" />
       <change beforePath="$PROJECT_DIR$/src/Application/Interface.fxml" afterPath="$PROJECT_DIR$/src/Application/Interface.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java" afterPath="$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java" />
       <change beforePath="$PROJECT_DIR$/src/DMweKa/DataSet.java" afterPath="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
-      <change beforePath="$PROJECT_DIR$/src/DMweKa/PreProcessing.java" afterPath="$PROJECT_DIR$/src/DMweKa/PreProcessing.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,39 +95,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="KNN_Implementation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="164" column="1" lean-forward="true" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
+            <state relative-caret-position="319">
+              <caret line="537" column="47" lean-forward="false" selection-start-line="537" selection-start-column="47" selection-end-line="537" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#euclideanDistance#0;class#KNN_Implementation#0" expanded="false" />
-                <element signature="method#manhattanDistance#0;class#KNN_Implementation#0" expanded="false" />
-                <element signature="method#getKValueandDistMetrics#0;class#KNN_Implementation#0" expanded="false" />
+                <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
+                <element signature="method#showAttributsNames#0;class#Controller#0" expanded="false" />
+                <element signature="method#clearForInstance#0;class#Controller#0" expanded="false" />
+                <element signature="method#clearForAttribut#0;class#Controller#0" expanded="false" />
+                <element signature="method#barchar#0;class#Controller#0" expanded="false" />
+                <element signature="e#12085#12102#0" expanded="true" />
+                <element signature="e#12523#12540#0" expanded="true" />
+                <element signature="method#process#0;class#Controller#0" expanded="false" />
+                <element signature="method#KNN_class_numm#0;class#Controller#0" expanded="false" />
+                <element signature="method#KNN_Classe#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnnParams.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KnnParams.java">
+      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="491" column="0" lean-forward="false" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+              <folding>
+                <element signature="e#15414#15415#0" expanded="true" />
+                <element signature="e#15459#15460#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Instances.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/Instances.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="1102" column="0" lean-forward="false" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KNN_Distance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java">
+      <file leaf-file-name="AprioriAlgo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/AprioriAlgo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KnnParams.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KnnParams.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-              <folding>
-                <element signature="method#getEuclideanDistance#0;class#KNN_Distance#0" expanded="false" />
-              </folding>
+              <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>listAttributs</find>
       <find>classIsMissing</find>
       <find>?</find>
       <find>instances</find>
@@ -161,7 +179,6 @@
       <find>tab</find>
       <find>nume</find>
       <find>table</find>
-      <find>System.out</find>
       <find>mode</find>
       <find>barchart</find>
       <find>label</find>
@@ -182,6 +199,8 @@
       <find>dataSet</find>
       <find>missing</find>
       <find>DistanceAndFeatures</find>
+      <find>System.out</find>
+      <find>percent_TrainData</find>
     </findStrings>
     <replaceStrings>
       <replace>out +=</replace>
@@ -244,13 +263,13 @@
         <option value="$PROJECT_DIR$/src/Algos/DataSet.java" />
         <option value="$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java" />
         <option value="$PROJECT_DIR$/src/DMweKa/PreProcessing.java" />
-        <option value="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
-        <option value="$PROJECT_DIR$/src/Application/Controller.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KnnAlgo.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/DistanceAndFeatures.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java" />
-        <option value="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KnnParams.java" />
+        <option value="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" />
+        <option value="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
+        <option value="$PROJECT_DIR$/src/Application/Controller.java" />
       </list>
     </option>
   </component>
@@ -378,8 +397,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -403,14 +421,34 @@
               <item name="DMP1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algos" type="462c0819:PsiDirectoryNode" />
+              <item name="Apriori" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algos" type="462c0819:PsiDirectoryNode" />
               <item name="KNN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DMweKa" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,21 +471,21 @@
     <property name="settings.editor.splitter.proportion" value="0.24585366" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data" />
-      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data\Apriori" />
-      <recent name="F:\intelliji work space\DMP1\src\DMweKa\Application" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="DMweKa.Application" />
-      <recent name="Application" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\KNN" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Apriori" />
       <recent name="F:\intelliji work space\DMP1\src\Application" />
       <recent name="F:\intelliji work space\src\sample" />
       <recent name="F:\intelliji work space" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DMweKa.Application" />
+      <recent name="Application" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data" />
+      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data\Apriori" />
+      <recent name="F:\intelliji work space\DMP1\src\DMweKa\Application" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -628,12 +666,18 @@
       <workItem from="1543752036785" duration="879000" />
       <workItem from="1543753063240" duration="318000" />
       <workItem from="1543753527054" duration="17342000" />
-      <workItem from="1543789567287" duration="3636000" />
+      <workItem from="1543789567287" duration="4285000" />
+      <workItem from="1543838436822" duration="4074000" />
+      <workItem from="1543845604191" duration="2350000" />
+      <workItem from="1543849135185" duration="27000" />
+      <workItem from="1543926677061" duration="765000" />
+      <workItem from="1543937112652" duration="3146000" />
+      <workItem from="1543961804462" duration="7766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196810000" />
+    <option name="totallyTimeSpent" value="215587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -648,13 +692,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33934426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32512316" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065053" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -672,6 +715,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +730,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -695,7 +739,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DMweKa/DataInstance.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/TreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -708,13 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="121" column="7" lean-forward="true" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/Instances.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="447" column="0" lean-forward="false" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -755,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/AbstractInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14454">
-          <caret line="677" column="0" lean-forward="true" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DMweKa/Application/AttributTableFx.java" />
     <entry file="file://$PROJECT_DIR$/src/DMweKa/Application/AttributPropertiesTable.java" />
     <entry file="file://$PROJECT_DIR$/src/DMweKa/Application/TableFx.java">
@@ -789,18 +818,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Apriori/Matrix.java" />
-    <entry file="file://$USER_HOME$/Downloads/Projet data mining 2016-2017/ProjetDataMining 2016-2017/src/Traitement/Kmeans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Projet data mining 2016-2017/ProjetDataMining 2016-2017/src/Traitement/Kmeans.java" />
     <entry file="file://$PROJECT_DIR$/src/Application/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,16 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7089">
-          <caret line="417" column="0" lean-forward="false" selection-start-line="417" selection-start-column="0" selection-end-line="417" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -839,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,19 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-          <folding>
-            <element signature="method#RecupDonnees#0;class#DataSet#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -931,17 +928,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_main.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/KNN/DistanceAndFeatures.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8636">
+          <caret line="537" column="0" lean-forward="false" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DMweKa/PreProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
+        <state relative-caret-position="1105">
           <caret line="153" column="32" lean-forward="false" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#preProcessData#0;class#PreProcessing#0" expanded="false" />
             <element signature="method#modeNomForClass#0;class#PreProcessing#0" expanded="false" />
             <element signature="method#modeNumForClass#0;class#PreProcessing#0" expanded="false" />
             <element signature="method#getClassOfInstance#0;class#PreProcessing#0" expanded="false" />
@@ -953,61 +957,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/AprioriAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="499" column="63" lean-forward="true" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
-            <element signature="method#showAttributsNames#0;class#Controller#0" expanded="false" />
-            <element signature="method#clearForInstance#0;class#Controller#0" expanded="false" />
-            <element signature="method#clearForAttribut#0;class#Controller#0" expanded="false" />
-            <element signature="method#barchar#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/KNN/DistanceAndFeatures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="method#getEuclideanDistance#0;class#KNN_Distance#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="164" column="1" lean-forward="true" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="1" />
+        <state relative-caret-position="311">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#distanceCalcualte#0;class#KNN_Implementation#0" expanded="false" />
             <element signature="method#euclideanDistance#0;class#KNN_Implementation#0" expanded="false" />
             <element signature="method#manhattanDistance#0;class#KNN_Implementation#0" expanded="false" />
             <element signature="method#getKValueandDistMetrics#0;class#KNN_Implementation#0" expanded="false" />
@@ -1015,11 +978,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/AbstractInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="434" column="0" lean-forward="false" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding>
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2853#2854#0" expanded="false" />
+            <element signature="e#2890#2891#0" expanded="false" />
+            <element signature="e#2952#2953#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KnnParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/AprioriAlgo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="491" column="0" lean-forward="false" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+          <folding>
+            <element signature="e#15414#15415#0" expanded="true" />
+            <element signature="e#15459#15460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/Instances.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1102" column="0" lean-forward="false" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="537" column="47" lean-forward="false" selection-start-line="537" selection-start-column="47" selection-end-line="537" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
+            <element signature="method#showAttributsNames#0;class#Controller#0" expanded="false" />
+            <element signature="method#clearForInstance#0;class#Controller#0" expanded="false" />
+            <element signature="method#clearForAttribut#0;class#Controller#0" expanded="false" />
+            <element signature="method#barchar#0;class#Controller#0" expanded="false" />
+            <element signature="e#12085#12102#0" expanded="true" />
+            <element signature="e#12523#12540#0" expanded="true" />
+            <element signature="method#process#0;class#Controller#0" expanded="false" />
+            <element signature="method#KNN_class_numm#0;class#Controller#0" expanded="false" />
+            <element signature="method#KNN_Classe#0;class#Controller#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

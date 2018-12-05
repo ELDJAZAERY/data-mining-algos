@@ -10,4 +10,6 @@ public class KnnParams {
     public static HashMap<String[],Double> voisin;
     public static HashMap<String[],Double> voising;
 
+    public static HashMap<String[],String[]> cluster = new HashMap<>();
+
 }

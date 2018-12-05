@@ -187,31 +187,31 @@
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <ComboBox fx:id="comboBoxAlgos" layoutX="41.0" layoutY="46.0" prefHeight="31.0" prefWidth="227.0" />
-                        <TextField fx:id="param1" accessibleRole="TEXT" layoutX="411.0" layoutY="41.0" prefHeight="38.0" prefWidth="49.0" promptText="75" />
+                        <TextField fx:id="param1" accessibleRole="TEXT" layoutX="419.0" layoutY="41.0" prefHeight="38.0" prefWidth="49.0" promptText="75" />
                         <TextField fx:id="param2" layoutX="585.0" layoutY="41.0" prefHeight="38.0" prefWidth="64.0" promptText="100" />
                         <Button layoutX="1041.0" layoutY="42.0" mnemonicParsing="false" onAction="#process" prefHeight="40.0" prefWidth="216.0" text="Lance">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Label fx:id="lableParam1" layoutX="304.0" layoutY="43.0" prefHeight="34.0" prefWidth="129.0" text="Confiance" textFill="#ffd400">
+                        <Label fx:id="lableParam1" layoutX="294.0" layoutY="43.0" prefHeight="34.0" prefWidth="126.0" text="Confiance" textFill="#ffd400">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lableParam2" layoutX="514.0" layoutY="43.0" prefHeight="34.0" prefWidth="74.0" text="Support" textFill="#ffd400">
+                        <Label fx:id="lableParam2" layoutX="506.0" layoutY="43.0" prefHeight="34.0" prefWidth="104.0" text="Support" textFill="#ffd400">
                            <font>
                               <Font name="System Bold Italic" size="18.0" />
                            </font>
                         </Label>
                         <TextArea fx:id="out1" editable="false" layoutX="18.0" layoutY="126.0" prefHeight="495.0" prefWidth="641.0" styleClass="text-area" />
                         <TextArea fx:id="out2" editable="false" layoutX="681.0" layoutY="126.0" prefHeight="495.0" prefWidth="655.0" styleClass="text-area" />
-                        <Label fx:id="labelOut1" layoutX="36.0" layoutY="96.0" prefHeight="30.0" prefWidth="91.0" text="# Items" textFill="#ffd400">
+                        <Label fx:id="labelOut1" layoutX="36.0" layoutY="96.0" prefHeight="30.0" prefWidth="365.0" text="# Items" textFill="#ffd400">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="labelOut2" layoutX="708.0" layoutY="96.0" prefHeight="30.0" prefWidth="254.0" text="# Regles d'associations" textFill="#ffd400">
+                        <Label fx:id="labelOut2" layoutX="708.0" layoutY="96.0" prefHeight="30.0" prefWidth="297.0" text="# Regles d'associations" textFill="#ffd400">
                            <font>
                               <Font name="System Bold Italic" size="20.0" />
                            </font>

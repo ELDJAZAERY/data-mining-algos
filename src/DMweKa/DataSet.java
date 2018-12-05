@@ -33,7 +33,8 @@ public class DataSet {
     public Instances insts;
     public Instances prutInst;
 
-    public DataSet(Instances data) {
+
+    public DataSet(Instances data,boolean normalize) {
 
         prutInst = data;
         // Replace Missing values !!
@@ -52,7 +53,7 @@ public class DataSet {
             listAttributs.add(data.attribute(i).name());
         }
 
-        PreProcessing.normaizeNumeric(this);
+        if(normalize) PreProcessing.normaizeNumeric(this);
     }
 
     public ArrayList<AttributDataSet> getAttributs() {
@@ -101,6 +102,18 @@ public class DataSet {
             items.add(new TableFx(attribut.name(),attribut.type()));
         }
         return items;
+    }
+
+    public boolean is_Class_Numerique(){
+        return ( insts.attribute(nbAttributs-1).isNumeric() && !insts.attribute(nbAttributs-1).isDate() );
+    }
+
+    public AttributDataSet classAttribut(){
+        return attributs.get(nbAttributs-1);
+    }
+
+    public boolean is_Class_Date(){
+        return insts.attribute(nbAttributs-1).isDate();
     }
 
 }
