@@ -474,8 +474,6 @@ public class Controller {
         th.start();
     }
 
-
-
     void KNN() {
         if(dataSet.is_Class_Numerique()) { KNN_class_numm(); return;}
         if(dataSet.is_Class_Date()) { KNN_class_date(); return;}
@@ -769,7 +767,6 @@ public class Controller {
         newInst += " Class ==> " +classes.get(classIndex);
         return newInst;
     }
-
 
     String toStringr(Instance inst){
         String newInst = "";
