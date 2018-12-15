@@ -1,101 +1,157 @@
 package Algos.DBSCAN;
 
 
-import Algos.Cluster;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import weka.core.Instances;
+import java.util.*;
 
 
-public class DBSCANClusterer<T> {
-
-    private final double eps;
-
-    private final int   minPts;
+public class DBSCANClusterer {
 
 
     private enum PointStatus {
+        /**
+         * The point has is considered to be noise.
+         */
         NOISE,
-        PART_OF_CLUSTER
+        /**
+         * The point is already part of a cluster.
+         */
+        CLUSTERED
     }
 
-    public DBSCANClusterer(final double eps, final int minPts){
-        this.eps = eps;
-        this.minPts = minPts;
-    }
+    private final double epsilon;
+    private final double minPts;
+    private TreeMap<String, PointStatus> visitedPoints = new TreeMap<>();
+    private List<Cluster> clusters = new ArrayList<>();
+    private Collection<Point> allPoints = new ArrayList<>();
+    private TreeMap<String, BitSet> mapAttributeValueToCodification = new TreeMap<>();
 
-    public double getEps() {
-        return eps;
-    }
+    public DBSCANClusterer(double epsilon, double minPts, Instances instances) {
+        this.epsilon = epsilon;
+        this.minPts  = minPts;
 
-    public int getMinPts() {
-        return minPts;
-    }
-
-    public List<Cluster<T>> cluster(final Collection<T> points) {
-
-        final List<Cluster<T>> clusters = new ArrayList<Cluster<T>>();
-
-        for (final T point : points) {
-            final List<T> neighbors = getNeighbors(point, points);
-            if (neighbors.size() >= minPts) {
-                // DBSCAN does not care about center points
-                final Cluster<T> cluster = new Cluster<T>(null);
-                clusters.add(expandCluster(cluster, point, neighbors, points));
+        for (int i = 0; i < instances.numAttributes() - 1; i++) {
+            if (instances.attribute(i).isNominal()) {
+                Enumeration a = instances.attribute(i).enumerateValues();
+                int codif = 0;
+                if (a == null)
+                    return;
+                while (a.hasMoreElements()) {
+                    mapAttributeValueToCodification.put(
+                            instances.attribute(i).name().toLowerCase() + " : " + a.nextElement().toString().toLowerCase(),
+                            BitSet.valueOf(new long[]{codif++}));
+                }
             }
         }
-        return clusters;
+
+        Point.mapAttributeValueToCodification = mapAttributeValueToCodification;
+
+        for (int i = 0; i < instances.numInstances(); i++) {
+            this.allPoints.add(new Point(instances.instance(i)));
+        }
+
     }
 
-    private Cluster<T> expandCluster(final Cluster<T> cluster,
-                                     final T point,
-                                     final List<T> neighbors,
-                                     final Collection<T> points) {
-        cluster.addPoint(point);
+    public void start() {
+        for (Point point : allPoints) {
+            if (visitedPoints.get(point.toString()) != null) {
+                continue;
+            }
+            List<Point> neighbors = getDensityReachableNeighbors(point, allPoints);
+            if (neighbors.size() >= minPts) {
+                Cluster cluster = new Cluster();
+                clusters.add(exploreNeighbors(cluster, point, neighbors, allPoints, visitedPoints));
+            } else {
+                visitedPoints.put(point.toString(), PointStatus.NOISE);
+            }
+        }
 
-        List<T> seeds = new ArrayList<T>(neighbors);
+    }
+
+    private Cluster exploreNeighbors(Cluster cluster,
+                                     Point point,
+                                     List<Point> neighbors,
+                                     Collection<Point> allPoints,
+                                     Map<String, PointStatus> visited) {
+
+        cluster.addToCluster(point);
+        visited.put(point.toString(), PointStatus.CLUSTERED);
+
+        List<Point> startingNeighbors = new ArrayList<>(neighbors);
         int index = 0;
-        while (index < seeds.size()) {
-            final T current = seeds.get(index);
-            PointStatus pStatus = null ;
-            // only check non-visited points
-            if (pStatus == null) {
-                final List<T> currentNeighbors = getNeighbors(current, points);
+        while (index < startingNeighbors.size()) {
+            Point current = startingNeighbors.get(index);
+            PointStatus pointStatus = visited.get(current.toString());
+            if (pointStatus == null) {
+                List<Point> currentNeighbors = getDensityReachableNeighbors(current, allPoints);
                 if (currentNeighbors.size() >= minPts) {
-                    seeds = merge(seeds, currentNeighbors);
+                    startingNeighbors = fusion(startingNeighbors, currentNeighbors);
                 }
             }
 
-            if (pStatus != PointStatus.PART_OF_CLUSTER) {
-                cluster.addPoint(current);
+            if (pointStatus != PointStatus.CLUSTERED) {
+                visited.put(current.toString(), PointStatus.CLUSTERED);
+                cluster.addToCluster(current);
             }
-
             index++;
         }
         return cluster;
     }
 
+    private List<Point> fusion(List<Point> one, List<Point> two) {
 
-    private List<T> getNeighbors(final T point, final Collection<T> points) {
-        final List<T> neighbors = new ArrayList<T>();
-        for (final T neighbor : points) {
-            if (point != neighbor ) {
+        final Set<Point> oneSet = new HashSet<>(one);
+        for (Point item : two) {
+            if (!oneSet.contains(item)) {
+                one.add(item);
+            }
+        }
+        return one;
+    }
+
+    private List<Point> getDensityReachableNeighbors(Point point, Collection<Point> points) {
+        List<Point> neighbors = new ArrayList<>();
+        for (Point neighbor : points) {
+            double dst = Point.distance(point, neighbor, 2);
+            if ( point != neighbor && dst <= epsilon) {
                 neighbors.add(neighbor);
             }
         }
         return neighbors;
     }
 
-    private List<T> merge(final List<T> one, final List<T> two) {
-        final Set<T> oneSet = new HashSet<T>(one);
-        for (T item : two) {
-            if (!oneSet.contains(item)) {
-                one.add(item);
-            }
+    public double getIntraClassScore() {
+        if (clusters.size() == 0)
+            return -1;
+        double sum = 0;
+        for (Cluster cl : clusters) {
+            sum += cl.getClassScore();
         }
-        return one;
+        return sum;
+    }
+
+    public double getInterClassScore() {
+        if (clusters == null)
+            return -1;
+
+        Cluster allGs = new Cluster();
+        for (Cluster cl : clusters) {
+            allGs.addToCluster(cl.getCenterOfCluster());
+        }
+
+        return allGs.getClassScore();
+    }
+
+    public List<Cluster> getClusters() {
+        return clusters;
+    }
+
+    public double getEpsilon() {
+        return epsilon;
+    }
+
+    public double getMinPts() {
+        return minPts;
     }
 
 }

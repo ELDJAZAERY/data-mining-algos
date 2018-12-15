@@ -2,6 +2,9 @@ package Application;
 
 
 import Algos.Apriori.AprioriAlgo;
+import Algos.DBSCAN.Cluster;
+import Algos.DBSCAN.DBSCANClusterer;
+import Algos.DBSCAN.Point;
 import Algos.KNN.KnnParams;
 import DMweKa.Application.BoxPlot;
 import DMweKa.Application.DynamicTableFx;
@@ -23,6 +26,7 @@ import javafx.scene.layout.BorderPane;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.lazy.IBk;
+import weka.clusterers.SimpleKMeans;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
@@ -231,21 +235,22 @@ public class Controller {
 
         comboBoxAlgos.getItems().add("Apriori");
         comboBoxAlgos.getItems().add("KNN");
+        comboBoxAlgos.getItems().add("DbScan");
         //comboBoxAlgos.getItems().add("KNN classifieur");
 
-        comboBoxAlgos.setValue("Apriori");
+        comboBoxAlgos.setValue("DbScan");
 
 
         // force int input from confiance and support
         param1.textProperty().addListener(new ChangeListener<String>() {
              @Override
              public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                 if (!newValue.matches("\\d*")) {
+                 if (!newValue.matches("[\\d\\.]*")) {
                      param1.setText(newValue.replaceAll("[^\\d]", ""));
                  }else {
                      if(!param1.getText().isEmpty()){
-                         AprioriAlgo.NC = Integer.valueOf(param1.getText());
-                         KnnParams.percent_TrainData = Integer.valueOf(param1.getText());
+                         AprioriAlgo.NC = (int) Double.parseDouble(param1.getText());
+                         KnnParams.percent_TrainData = (int) Double.parseDouble(param1.getText());
                      }
                  }
              }
@@ -258,8 +263,8 @@ public class Controller {
                     param2.setText(newValue.replaceAll("[^\\d]", ""));
                 } else {
                     if(!param2.getText().isEmpty()){
-                        AprioriAlgo.SUPPORT = Integer.valueOf(param2.getText());
-                        KnnParams.K = Integer.valueOf(param2.getText());
+                        AprioriAlgo.SUPPORT = (int) Double.parseDouble(param2.getText());
+                        KnnParams.K = (int) Double.parseDouble(param2.getText());
                     }
                 }
             }
@@ -289,6 +294,17 @@ public class Controller {
                     lableParam2.setText("K Voisins");
                     labelOut1.setText("# Real Class Instances");
                     labelOut2.setText("# Predit Class Instances");
+                    out1.setEditable(false);
+                }else if(newValue.equals("DbScan")) {
+                    lableParam1.setVisible(true);
+                    lableParam2.setVisible(true);
+                    param1.setVisible(true);
+                    param2.setVisible(true);
+
+                    lableParam1.setText("Epsiloln");
+                    lableParam2.setText("Min Points");
+                    labelOut1.setText("# Clusters");
+                    labelOut2.setText("# Stats");
                     out1.setEditable(false);
                 }else{
                     lableParam1.setVisible(false);
@@ -462,6 +478,9 @@ public class Controller {
                 }else if(comboBoxAlgos.getValue().equals("KNN")){
                     out1.setText("");
                     KNN();
+                }else if(comboBoxAlgos.getValue().equals("DbScan")) {
+                    out1.setText("");
+                    DbScan();
                 }else{
                     KNN_Classe();
                 }
@@ -854,6 +873,78 @@ public class Controller {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+    }
+
+    void DbScan(){
+        try {
+            String sout1 = "" , sout2 = "" ;
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path + fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances, false);
+            Instances data = dset.insts;
+
+            double epsil = Double.parseDouble(param1.getText()) ,  minPts = (int) Double.parseDouble(param2.getText());
+            DBSCANClusterer dbscan = new DBSCANClusterer(epsil,minPts,data);
+
+            dbscan.start();
+
+            sout2 += " ---- Stats ---- \n";
+            sout2 += " Nombre of Clauster --> " + dbscan.getClusters().size() + "\n";
+            sout2 += " Inter Class --> " + dbscan.getInterClassScore()+ "\n";
+            sout2 += " Intra Class --> " + dbscan.getIntraClassScore()+ "\n";
+
+
+            int nbClauster = 1 ;
+            for(Cluster c:dbscan.getClusters()){
+                sout1 += " ---- Clauster Numero " + nbClauster + " ----\n <Clauster"+nbClauster+"> \n" ;
+                for(Point p:c.getElements()){
+                    sout1 += "\t"+p.toString() + "\n" ;
+                }
+                sout1 += "</Clauster"+(nbClauster++)+">\n\n\n";
+            }
+
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+
+            Time.setText(""+time);
+            out1.setText(sout1);
+            out2.setText(sout2);
+
+        }catch(Exception e){}
+    }
+
+    void dbScan(){
+        try {
+            String sout1 = "" , sout2 = "" ;
+            long startTime = System.currentTimeMillis();
+
+            String fileName = combobox.getValue();
+            DataSource dataSrc = new DataSource(path + fileName);
+            Instances instances = dataSrc.getDataSet();
+
+            DataSet dset = new DataSet(instances, false);
+            Instances data = dset.insts;
+            long time = (System.currentTimeMillis()-startTime)/1000 ;
+
+            double epsil = Double.parseDouble(param1.getText()) ,  minPts = (int) Double.parseDouble(param2.getText());
+
+            SimpleKMeans dbs = new SimpleKMeans();
+            dbs.setNumClusters((int) minPts);
+            dbs.setSeed((int) epsil);
+            dbs.buildClusterer(data);
+
+
+            dbs.getNumClusters();
+
+            Time.setText(""+time);
+            out1.setText(sout1);
+            out2.setText(sout2);
+
+        }catch(Exception e){}
 
     }
 
