@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$3.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$3.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DBSCAN/DBSCANClusterer.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DBSCAN/DBSCANClusterer.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" />
       <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/DbScanAlgo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/EuclideanDoublePoint.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" />
       <change beforePath="$PROJECT_DIR$/src/Application/Controller.java" afterPath="$PROJECT_DIR$/src/Application/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/DMweKa/DataSet.java" afterPath="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,11 +91,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="899" column="0" lean-forward="true" selection-start-line="899" selection-start-column="0" selection-end-line="899" selection-end-column="0" />
+            <state relative-caret-position="8">
+              <caret line="889" column="68" lean-forward="false" selection-start-line="889" selection-start-column="68" selection-end-line="889" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
@@ -118,6 +114,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DataSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreProcessing.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DMweKa/PreProcessing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBSCAN_ALGO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3777">
+              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="30" />
+              <folding>
+                <element signature="method#eps_neighborhood#0;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#in_clusters#0;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#disimilarity#0;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#disimilarity#1;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#disimilarity#2;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#inertie_intraclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
+                <element signature="method#inertie_interclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -129,12 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nume</find>
-      <find>table</find>
-      <find>mode</find>
-      <find>barchart</find>
-      <find>label</find>
-      <find>&quot;label&quot;</find>
       <find>BoxAndWhiskerCategoryDataset</find>
       <find>pane</find>
       <find>id</find>
@@ -158,7 +186,13 @@
       <find>getDensityReachableNeighbors</find>
       <find>getCenterOfCluster</find>
       <find>getNeighbours</find>
+      <find>markUnvisited</find>
+      <find>setEpsilon</find>
+      <find>toString</find>
+      <find>toStri</find>
+      <find>to</find>
       <find>exploreNeighbors</find>
+      <find>gravity_centers</find>
     </findStrings>
     <replaceStrings>
       <replace>out +=</replace>
@@ -185,9 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DMweKa/DataInstance.java" />
-        <option value="$PROJECT_DIR$/src/DMweKa/InstanceData.java" />
-        <option value="$PROJECT_DIR$/src/DMweKa/AttributInstance.java" />
         <option value="$PROJECT_DIR$/src/Application/TableAtt.java" />
         <option value="$PROJECT_DIR$/src/DMweKa/Application/AttributPropertiesTable.java" />
         <option value="$PROJECT_DIR$/src/DMweKa/Application/AttributTableFx.java" />
@@ -216,25 +247,28 @@
         <option value="$PROJECT_DIR$/src/Algos/KNN/KNN.java" />
         <option value="$PROJECT_DIR$/src/Algos/DataSet.java" />
         <option value="$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java" />
-        <option value="$PROJECT_DIR$/src/DMweKa/PreProcessing.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KnnAlgo.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/DistanceAndFeatures.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KnnParams.java" />
         <option value="$PROJECT_DIR$/src/Algos/KNN/KNN_Implementation.java" />
-        <option value="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
         <option value="$PROJECT_DIR$/src/Algos/Cluster.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN/EuclideanDoublePoint.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DbScanAlgo.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN.java" />
-        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCANClusterer.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN2/TestDBSCAN.java" />
-        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN2/forOPTICSAndDBScan/Utils/UpdateQueue.java" />
+        <option value="$PROJECT_DIR$/src/Algos/DBSCAN2/Main.java" />
         <option value="$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCAN.java" />
+        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_Algo.java" />
+        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" />
+        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" />
+        <option value="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java" />
+        <option value="$PROJECT_DIR$/src/DMweKa/PreProcessing.java" />
+        <option value="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
         <option value="$PROJECT_DIR$/src/Application/Controller.java" />
       </list>
     </option>
@@ -363,9 +397,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -385,10 +416,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Algos" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Algos" type="462c0819:PsiDirectoryNode" />
+              <item name="DBSCAN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DMweKa" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,9 +462,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.24585366" />
+    <property name="create.test.in.the.same.root" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\DBSCAN" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\DBSCAN2" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\data\Apriori" />
@@ -422,8 +477,8 @@
       <recent name="Application" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\DBSCAN2" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\DBSCAN" />
+      <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\DBSCAN2" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Algos\KNN" />
       <recent name="C:\Users\Azedine\Desktop\TPs\DMP1\src\Apriori" />
       <recent name="F:\intelliji work space\DMP1\src\Application" />
@@ -619,14 +674,17 @@
       <workItem from="1544398180514" duration="793000" />
       <workItem from="1544400426028" duration="722000" />
       <workItem from="1544716079806" duration="19676000" />
+      <workItem from="1544973851535" duration="9888000" />
+      <workItem from="1544993377923" duration="9295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243926000" />
+    <option name="totallyTimeSpent" value="263109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -634,34 +692,69 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33934426" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33934426" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3229508" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22163388" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33934426" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48032787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3229508" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32459018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -675,7 +768,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="31" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -684,23 +777,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/Apriori/BL.dat.arff" />
-    <entry file="file://$PROJECT_DIR$/src/out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Apriori/Matrix.java" />
-    <entry file="file://$USER_HOME$/Downloads/Projet data mining 2016-2017/ProjetDataMining 2016-2017/src/Traitement/Kmeans.java" />
-    <entry file="file://$PROJECT_DIR$/src/Application/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -785,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -808,20 +877,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_main.java" />
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/DistanceAndFeatures.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8636">
-          <caret line="537" column="0" lean-forward="false" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DMweKa/PreProcessing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="153" column="32" lean-forward="false" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN_Distance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -843,20 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/Instances.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="1102" column="0" lean-forward="false" selection-start-line="1102" selection-start-column="0" selection-end-line="1102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -864,29 +905,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/AbstractInstance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="499" column="0" lean-forward="false" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/EuclideanDoublePoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DbScanAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/EuclideanDoublePoint.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DbScanAlgo.java" />
     <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -931,120 +951,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="201" column="13" lean-forward="true" selection-start-line="201" selection-start-column="13" selection-end-line="201" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCANClusteringException.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DistanceMetric.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DistanceMetricNumbers.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/TestDBSCAN.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/forOPTICSAndDBScan/Utils/UpdateQueue.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/forOPTICSAndDBScan/DataObjects/DataObject.java" />
     <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
           <folding>
             <element signature="method#getAttInfos#0;class#Point#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCANClusteringException.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/Instances.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <caret line="509" column="0" lean-forward="false" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DistanceMetric.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Double.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <caret line="537" column="0" lean-forward="false" selection-start-line="537" selection-start-column="0" selection-end-line="537" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DistanceMetricNumbers.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN.java" />
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/Main.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/user lib/weka/weka-src.jar!/src/main/java/weka/core/AbstractInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="503" column="55" lean-forward="true" selection-start-line="503" selection-start-column="55" selection-end-line="503" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/TreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5287">
+          <caret line="351" column="0" lean-forward="false" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/TestDBSCAN.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCANClusterer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="158" column="57" lean-forward="true" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
+        <state relative-caret-position="1275">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#215#216#0" expanded="false" />
-            <element signature="e#264#265#0" expanded="false" />
-            <element signature="method#getClassScore#0;class#Cluster#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/forOPTICSAndDBScan/Utils/UpdateQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding>
+            <element signature="method#getClassScore#0;class#Cluster#0" expanded="false" />
+            <element signature="method#getCenterOfCluster#0;class#Cluster#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="74" column="71" lean-forward="false" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+        <state relative-caret-position="-332">
+          <caret line="78" column="9" lean-forward="false" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
           <folding>
             <element signature="class#PointStatus#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#start#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#exploreNeighbors#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#fusion#0;class#DBSCANClusterer#0" expanded="false" />
+            <element signature="method#DBSCANClusterer#0;class#DBSCANClusterer#0" expanded="false" />
             <element signature="method#getIntraClassScore#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#getInterClassScore#0;class#DBSCANClusterer#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/forOPTICSAndDBScan/DataObjects/DataObject.java">
+    <entry file="file://$PROJECT_DIR$/src/Algos/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        <state relative-caret-position="1139">
+          <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+          <folding>
+            <element signature="e#448#449#0" expanded="false" />
+            <element signature="e#481#482#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN2/DBSCAN.java">
+    <entry file="file://$PROJECT_DIR$/src/DMweKa/PreProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3360">
-          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        <state relative-caret-position="172">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="899" column="0" lean-forward="true" selection-start-line="899" selection-start-column="0" selection-end-line="899" selection-end-column="0" />
+        <state relative-caret-position="8">
+          <caret line="889" column="68" lean-forward="false" selection-start-line="889" selection-start-column="68" selection-end-line="889" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
@@ -1058,6 +1090,22 @@
             <element signature="method#toStringr#0;class#Controller#0" expanded="false" />
             <element signature="method#toStringr#1;class#Controller#0" expanded="false" />
             <element signature="method#KNN_Classe#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3777">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="method#eps_neighborhood#0;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#in_clusters#0;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#disimilarity#0;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#disimilarity#1;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#disimilarity#2;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#inertie_intraclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
+            <element signature="method#inertie_interclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
           </folding>
         </state>
       </provider>

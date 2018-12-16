@@ -44,7 +44,7 @@ public class Cluster implements Comparable<Cluster> {
         }
         double sum = 0;
         for (Point p : elements) {
-            sum+=Math.pow(Point.distance(p,G,2),2);
+            sum += Math.pow(Point.distance(p,G,2),2);
         }
         return sum/this.elements.size();
     }

@@ -2,9 +2,7 @@ package Application;
 
 
 import Algos.Apriori.AprioriAlgo;
-import Algos.DBSCAN.Cluster;
-import Algos.DBSCAN.DBSCANClusterer;
-import Algos.DBSCAN.Point;
+import Algos.DBSCAN.DBSCAN_ALGO;
 import Algos.KNN.KnnParams;
 import DMweKa.Application.BoxPlot;
 import DMweKa.Application.DynamicTableFx;
@@ -26,13 +24,13 @@ import javafx.scene.layout.BorderPane;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.lazy.IBk;
-import weka.clusterers.SimpleKMeans;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -238,7 +236,7 @@ public class Controller {
         comboBoxAlgos.getItems().add("DbScan");
         //comboBoxAlgos.getItems().add("KNN classifieur");
 
-        comboBoxAlgos.setValue("DbScan");
+        comboBoxAlgos.setValue("Apriori");
 
 
         // force int input from confiance and support
@@ -888,64 +886,52 @@ public class Controller {
             DataSet dset = new DataSet(instances, false);
             Instances data = dset.insts;
 
-            double epsil = Double.parseDouble(param1.getText()) ,  minPts = (int) Double.parseDouble(param2.getText());
-            DBSCANClusterer dbscan = new DBSCANClusterer(epsil,minPts,data);
+            double epsil = Double.parseDouble(param1.getText());
+            int minPts = (int) Double.parseDouble(param2.getText());
 
-            dbscan.start();
+            DBSCAN_ALGO dbscan = new DBSCAN_ALGO(data,epsil,minPts);
+
 
             sout2 += " ---- Stats ---- \n";
             sout2 += " Nombre of Clauster --> " + dbscan.getClusters().size() + "\n";
             sout2 += " Inter Class --> " + dbscan.getInterClassScore()+ "\n";
-            sout2 += " Intra Class --> " + dbscan.getIntraClassScore()+ "\n";
+            sout2 += " Intra Class --> " + dbscan.getIntraClassScore()+ "\n\n";
+
+            sout2 += " Gravity global --> " + dbscan.getGl().toString() + "\n\n";
+
+            sout2 += " ----- Gravity centers ----- \n";
+            sout2 += "<Gravity centers>\n";
+            for(Object inst:dbscan.getGravity_centers()){
+                sout2 += "\t" + inst.toString()+"\n";
+            }
+            sout2 += "</Gravity centers>\n\n";
+
+
+            sout2 += " ----- Noises Points ----- \n";
+            sout2 += "<Noises>\n";
+            for(Object inst:dbscan.getNoise()){
+                sout2 += "\t" + inst.toString()+"\n";
+            }
+            sout2 += "</Noises>\n\n";
 
 
             int nbClauster = 1 ;
-            for(Cluster c:dbscan.getClusters()){
+            for(List<Instance> c:dbscan.getClusters()){
                 sout1 += " ---- Clauster Numero " + nbClauster + " ----\n <Clauster"+nbClauster+"> \n" ;
-                for(Point p:c.getElements()){
+                for(Instance p:c){
                     sout1 += "\t"+p.toString() + "\n" ;
                 }
                 sout1 += "</Clauster"+(nbClauster++)+">\n\n\n";
             }
 
+
             long time = (System.currentTimeMillis()-startTime)/1000 ;
 
             Time.setText(""+time);
             out1.setText(sout1);
             out2.setText(sout2);
 
-        }catch(Exception e){}
-    }
-
-    void dbScan(){
-        try {
-            String sout1 = "" , sout2 = "" ;
-            long startTime = System.currentTimeMillis();
-
-            String fileName = combobox.getValue();
-            DataSource dataSrc = new DataSource(path + fileName);
-            Instances instances = dataSrc.getDataSet();
-
-            DataSet dset = new DataSet(instances, false);
-            Instances data = dset.insts;
-            long time = (System.currentTimeMillis()-startTime)/1000 ;
-
-            double epsil = Double.parseDouble(param1.getText()) ,  minPts = (int) Double.parseDouble(param2.getText());
-
-            SimpleKMeans dbs = new SimpleKMeans();
-            dbs.setNumClusters((int) minPts);
-            dbs.setSeed((int) epsil);
-            dbs.buildClusterer(data);
-
-
-            dbs.getNumClusters();
-
-            Time.setText(""+time);
-            out1.setText(sout1);
-            out2.setText(sout2);
-
-        }catch(Exception e){}
-
+        }catch(Exception e){ e.printStackTrace();}
     }
 
 }

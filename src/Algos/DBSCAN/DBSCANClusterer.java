@@ -26,6 +26,8 @@ public class DBSCANClusterer {
     private Collection<Point> allPoints = new ArrayList<>();
     private TreeMap<String, BitSet> mapAttributeValueToCodification = new TreeMap<>();
 
+    public int nbNoisePoints = 0 ;
+
     public DBSCANClusterer(double epsilon, double minPts, Instances instances) {
         this.epsilon = epsilon;
         this.minPts  = minPts;
@@ -55,6 +57,7 @@ public class DBSCANClusterer {
     public void start() {
         for (Point point : allPoints) {
             if (visitedPoints.get(point.toString()) != null) {
+                System.out.println("Matcheeeeeeed !!");
                 continue;
             }
             List<Point> neighbors = getDensityReachableNeighbors(point, allPoints);
@@ -63,6 +66,15 @@ public class DBSCANClusterer {
                 clusters.add(exploreNeighbors(cluster, point, neighbors, allPoints, visitedPoints));
             } else {
                 visitedPoints.put(point.toString(), PointStatus.NOISE);
+                nbNoisePoints ++;
+            }
+        }
+
+        // filtre
+        for(int i=0;i<clusters.size();i++){
+            if(clusters.get(i).getElements().size() < minPts){
+                clusters.remove(i);
+                i--;
             }
         }
 
@@ -117,6 +129,7 @@ public class DBSCANClusterer {
                 neighbors.add(neighbor);
             }
         }
+
         return neighbors;
     }
 
