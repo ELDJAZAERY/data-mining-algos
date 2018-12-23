@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DBSCAN/DBSCANClusterer.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DBSCAN/DBSCANClusterer.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/Apriori/AprioriAlgo.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DataSet.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Algos/DataSet.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller$4.class" />
       <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Controller.class" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Cluster.java" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/DBSCANClusterer.java" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/Point.java" />
-      <change beforePath="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" afterPath="$PROJECT_DIR$/src/Algos/DBSCAN/StatisticsRetriever.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" afterPath="$PROJECT_DIR$/out/production/intelliji work space/Application/Interface.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/DataSet.class" afterPath="$PROJECT_DIR$/out/production/intelliji work space/DMweKa/DataSet.class" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/Apriori/AprioriAlgo.java" afterPath="$PROJECT_DIR$/src/Algos/Apriori/Apriori_ALGO.java" />
+      <change beforePath="$PROJECT_DIR$/src/Algos/DataSet.java" afterPath="$PROJECT_DIR$/src/Algos/DataSet.java" />
       <change beforePath="$PROJECT_DIR$/src/Application/Controller.java" afterPath="$PROJECT_DIR$/src/Application/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Interface.fxml" afterPath="$PROJECT_DIR$/src/Application/Interface.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Main.java" afterPath="$PROJECT_DIR$/src/Application/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/DMweKa/DataSet.java" afterPath="$PROJECT_DIR$/src/DMweKa/DataSet.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -91,62 +96,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Apriori_ALGO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/Apriori_ALGO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="889" column="68" lean-forward="false" selection-start-line="889" selection-start-column="68" selection-end-line="889" selection-end-column="68" />
+            <state relative-caret-position="94">
+              <caret line="899" column="69" lean-forward="false" selection-start-line="899" selection-start-column="69" selection-end-line="899" selection-end-column="69" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
                 <element signature="method#showAttributsNames#0;class#Controller#0" expanded="false" />
                 <element signature="method#clearForInstance#0;class#Controller#0" expanded="false" />
                 <element signature="method#clearForAttribut#0;class#Controller#0" expanded="false" />
                 <element signature="method#barchar#0;class#Controller#0" expanded="false" />
+                <element signature="e#12734#12751#0" expanded="true" />
+                <element signature="e#13172#13189#0" expanded="true" />
                 <element signature="method#KNN#0;class#Controller#0" expanded="false" />
                 <element signature="method#KNN_class_date#0;class#Controller#0" expanded="false" />
                 <element signature="method#KNN_class_numm#0;class#Controller#0" expanded="false" />
                 <element signature="method#toStringr#0;class#Controller#0" expanded="false" />
                 <element signature="method#toStringr#1;class#Controller#0" expanded="false" />
                 <element signature="method#KNN_Classe#0;class#Controller#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreProcessing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DMweKa/PreProcessing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBSCAN_ALGO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3777">
-              <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="method#eps_neighborhood#0;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#in_clusters#0;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#disimilarity#0;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#disimilarity#1;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#disimilarity#2;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#inertie_intraclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
-                <element signature="method#inertie_interclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -397,51 +375,26 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="DM2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DM2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
+              <item name="DM2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DM2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algos" type="462c0819:PsiDirectoryNode" />
-              <item name="DBSCAN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DMP1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DMP1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DMweKa" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +412,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TPs/DMP1/intelliji work space.iml" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.24585366" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -676,11 +629,14 @@
       <workItem from="1544716079806" duration="19676000" />
       <workItem from="1544973851535" duration="9888000" />
       <workItem from="1544993377923" duration="9295000" />
+      <workItem from="1545344224181" duration="772000" />
+      <workItem from="1545345034835" duration="103000" />
+      <workItem from="1545577695840" duration="179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263109000" />
+    <option name="totallyTimeSpent" value="264163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -694,19 +650,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33934426" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3229508" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23903178" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -777,41 +733,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/glass/ui/InvokeLaterDispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="190" column="0" lean-forward="false" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/scene/control/skin/TextAreaSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="275" column="0" lean-forward="false" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/RegleAsso.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -851,14 +772,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algos/KNN/KNN.java" />
     <entry file="file://$PROJECT_DIR$/src/Application/Interface.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="189" column="50" lean-forward="false" selection-start-line="189" selection-start-column="50" selection-end-line="189" selection-end-column="50" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DMweKa/Application/DynamicTableFx.java">
@@ -891,13 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/AprioriAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -911,19 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="method#getMin#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMax#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMean#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMeanSameClass#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMedian#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getQ1#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getQ3#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMode#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#symetry#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#isSymetric#0;class#StatisticsRetriever#0" expanded="false" />
-            <element signature="method#getMidRange#0;class#StatisticsRetriever#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,15 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#439#440#0" expanded="false" />
-            <element signature="e#472#473#0" expanded="false" />
-            <element signature="e#506#507#0" expanded="false" />
-            <element signature="e#535#536#0" expanded="false" />
-            <element signature="e#564#565#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,9 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-          <folding>
-            <element signature="method#getAttInfos#0;class#Point#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5287">
           <caret line="351" column="0" lean-forward="false" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,10 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding>
-            <element signature="method#getClassScore#0;class#Cluster#0" expanded="false" />
-            <element signature="method#getCenterOfCluster#0;class#Cluster#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1030,22 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-332">
           <caret line="78" column="9" lean-forward="false" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
-          <folding>
-            <element signature="class#PointStatus#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#DBSCANClusterer#0;class#DBSCANClusterer#0" expanded="false" />
-            <element signature="method#getIntraClassScore#0;class#DBSCANClusterer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-          <folding>
-            <element signature="e#448#449#0" expanded="false" />
-            <element signature="e#481#482#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,7 +921,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/intelliji work space.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1065,47 +946,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/intelliji work space/Algos/Cluster.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/intelliji work space/Algos/DataSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TPs/DMP/intelliji work space.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="82" column="71" lean-forward="true" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DMweKa/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="284">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algos/Apriori/Apriori_ALGO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../TPs/DMP1/intelliji work space.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="889" column="68" lean-forward="false" selection-start-line="889" selection-start-column="68" selection-end-line="889" selection-end-column="68" />
+        <state relative-caret-position="94">
+          <caret line="899" column="69" lean-forward="false" selection-start-line="899" selection-start-column="69" selection-end-line="899" selection-end-column="69" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#showSelectedAttribut#0;class#Controller#0" expanded="false" />
             <element signature="method#showAttributsNames#0;class#Controller#0" expanded="false" />
             <element signature="method#clearForInstance#0;class#Controller#0" expanded="false" />
             <element signature="method#clearForAttribut#0;class#Controller#0" expanded="false" />
             <element signature="method#barchar#0;class#Controller#0" expanded="false" />
+            <element signature="e#12734#12751#0" expanded="true" />
+            <element signature="e#13172#13189#0" expanded="true" />
             <element signature="method#KNN#0;class#Controller#0" expanded="false" />
             <element signature="method#KNN_class_date#0;class#Controller#0" expanded="false" />
             <element signature="method#KNN_class_numm#0;class#Controller#0" expanded="false" />
             <element signature="method#toStringr#0;class#Controller#0" expanded="false" />
             <element signature="method#toStringr#1;class#Controller#0" expanded="false" />
             <element signature="method#KNN_Classe#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algos/DBSCAN/DBSCAN_ALGO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3777">
-          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="method#eps_neighborhood#0;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#in_clusters#0;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#disimilarity#0;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#disimilarity#1;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#disimilarity#2;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#inertie_intraclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
-            <element signature="method#inertie_interclasse#0;class#DBSCAN_ALGO#0" expanded="false" />
           </folding>
         </state>
       </provider>

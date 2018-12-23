@@ -37,13 +37,13 @@ public class DataSet {
     public DataSet(Instances data,boolean normalize) {
 
         prutInst = data;
+        relation = data.relationName();
         // Replace Missing values !!
         data = PreProcessing.preProcess(data);
         //data = PreProcessing.preProcessData(data);
         insts = data;
 
         instances = new ArrayList<>(data);
-        relation = data.relationName();
         nbInstances = data.numInstances();
         nbAttributs = data.numAttributes() ;
         data.setClassIndex(data.numAttributes() - 1);

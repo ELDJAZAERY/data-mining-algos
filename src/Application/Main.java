@@ -24,8 +24,8 @@ public class Main extends Application {
         launch(args);
 
 
-        //AprioriAlgo.process("data/Algos.Apriori/car_data.txt");
-        //AprioriAlgo.process("data/Algos.Apriori/BL.dat.arff");
+        //Apriori_ALGO.process("data/Algos.Apriori/car_data.txt");
+        //Apriori_ALGO.process("data/Algos.Apriori/BL.dat.arff");
     }
 
 }

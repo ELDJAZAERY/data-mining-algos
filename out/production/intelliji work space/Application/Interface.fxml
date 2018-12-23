@@ -70,20 +70,20 @@
                         <TextField fx:id="Nom" editable="false" layoutX="555.0" layoutY="171.0" prefHeight="38.0" prefWidth="148.0" />
                         <TextField fx:id="distincts" editable="false" layoutX="977.0" layoutY="168.0" prefHeight="38.0" prefWidth="99.0" />
                         <TextField fx:id="Type" editable="false" layoutX="761.0" layoutY="171.0" prefHeight="38.0" prefWidth="124.0" />
-                        <Label layoutX="280.0" layoutY="70.0" prefHeight="28.0" prefWidth="104.0" text="Instances:" textFill="#fff8f8">
+                        <Label layoutX="380.0" layoutY="70.0" prefHeight="28.0" prefWidth="104.0" text="Instances:" textFill="#fff8f8">
                            <font>
                               <Font name="System Bold Italic" size="19.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="attributes" editable="false" layoutX="706.0" layoutY="65.0" mouseTransparent="true" prefHeight="38.0" prefWidth="188.0" />
+                        <TextField fx:id="attributes" editable="false" layoutX="751.0" layoutY="65.0" mouseTransparent="true" prefHeight="38.0" prefWidth="120.0" />
                         <Label layoutX="22.0" layoutY="70.0" prefHeight="28.0" prefWidth="89.0" text="Relation:" textFill="#fff8f8">
                            <font>
                               <Font name="System Bold Italic" size="19.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="relation" editable="false" layoutX="107.0" layoutY="65.0" mouseTransparent="true" prefHeight="38.0" prefWidth="169.0" />
-                        <TextField fx:id="nbinstances" editable="false" layoutX="384.0" layoutY="65.0" mouseTransparent="true" prefHeight="38.0" prefWidth="212.0" />
-                        <Label layoutX="603.0" layoutY="70.0" prefHeight="28.0" prefWidth="103.0" text="Attributes:" textFill="#fff8f8">
+                        <TextField fx:id="relation" editable="false" layoutX="107.0" layoutY="61.0" mouseTransparent="true" prefHeight="46.0" prefWidth="271.0" />
+                        <TextField fx:id="nbinstances" editable="false" layoutX="473.0" layoutY="65.0" mouseTransparent="true" prefHeight="38.0" prefWidth="127.0" />
+                        <Label layoutX="626.0" layoutY="70.0" prefHeight="28.0" prefWidth="103.0" text="Attributes:" textFill="#fff8f8">
                            <font>
                               <Font name="System Bold Italic" size="19.0" />
                            </font>

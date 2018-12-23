@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.HashSet;
 
 
-public class AprioriAlgo {
+public class Apriori_ALGO {
 
 	public static int NC = 75 , SUPPORT = 100 ;
 
@@ -23,7 +23,7 @@ public class AprioriAlgo {
 
 
 		DataSet DataS= DataSet.RecupDonnees(path);
-		AprioriAlgo.ExtractionItems(DataS,NC,SUPPORT);
+		Apriori_ALGO.ExtractionItems(DataS,NC,SUPPORT);
 
 		long time = (System.currentTimeMillis()-startTime)/1000 ;
 		Time = ""+time;
@@ -36,7 +36,7 @@ public class AprioriAlgo {
 
 
 		DataSet DataS = DataSet.RecupDonnees(data);
-		AprioriAlgo.ExtractionItems(DataS,NC,SUPPORT);
+		Apriori_ALGO.ExtractionItems(DataS,NC,SUPPORT);
 
 		long time = (System.currentTimeMillis()-startTime)/1000 ;
 		Time = ""+time;

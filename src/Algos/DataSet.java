@@ -1,6 +1,6 @@
 package Algos;
 
-import Algos.Apriori.AprioriAlgo;
+import Algos.Apriori.Apriori_ALGO;
 import Algos.Apriori.row;
 import weka.core.Instance;
 
@@ -48,7 +48,7 @@ public class DataSet {
 				// on recherche les lignes ou les attributs sont décris
 				if (ligne != null) {
 					while (ligne != null) {
-						AprioriAlgo.outInstance += ligne +"\n";
+						Apriori_ALGO.outInstance += ligne +"\n";
 						String[] TabL = ligne.split(",");
 						row rowTemp = new row();
 						for (String s : TabL) {

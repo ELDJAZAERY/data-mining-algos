@@ -1,7 +1,7 @@
 package Application;
 
 
-import Algos.Apriori.AprioriAlgo;
+import Algos.Apriori.Apriori_ALGO;
 import Algos.DBSCAN.DBSCAN_ALGO;
 import Algos.KNN.KnnParams;
 import DMweKa.Application.BoxPlot;
@@ -247,7 +247,7 @@ public class Controller {
                      param1.setText(newValue.replaceAll("[^\\d]", ""));
                  }else {
                      if(!param1.getText().isEmpty()){
-                         AprioriAlgo.NC = (int) Double.parseDouble(param1.getText());
+                         Apriori_ALGO.NC = (int) Double.parseDouble(param1.getText());
                          KnnParams.percent_TrainData = (int) Double.parseDouble(param1.getText());
                      }
                  }
@@ -261,7 +261,7 @@ public class Controller {
                     param2.setText(newValue.replaceAll("[^\\d]", ""));
                 } else {
                     if(!param2.getText().isEmpty()){
-                        AprioriAlgo.SUPPORT = (int) Double.parseDouble(param2.getText());
+                        Apriori_ALGO.SUPPORT = (int) Double.parseDouble(param2.getText());
                         KnnParams.K = (int) Double.parseDouble(param2.getText());
                     }
                 }
@@ -469,10 +469,10 @@ public class Controller {
 
                 if(comboBoxAlgos.getValue().equals("Apriori")){
                     out1.setText("");
-                    AprioriAlgo.process(dataSet);
-                    out1.setText(AprioriAlgo.outItems);
-                    out2.setText(AprioriAlgo.outRegles);
-                    Time.setText(AprioriAlgo.Time);
+                    Apriori_ALGO.process(dataSet);
+                    out1.setText(Apriori_ALGO.outItems);
+                    out2.setText(Apriori_ALGO.outRegles);
+                    Time.setText(Apriori_ALGO.Time);
                 }else if(comboBoxAlgos.getValue().equals("KNN")){
                     out1.setText("");
                     KNN();
@@ -897,7 +897,7 @@ public class Controller {
             sout2 += " Inter Class --> " + dbscan.getInterClassScore()+ "\n";
             sout2 += " Intra Class --> " + dbscan.getIntraClassScore()+ "\n\n";
 
-            sout2 += " Gravity global --> " + dbscan.getGl().toString() + "\n\n";
+            sout2 += " --- Gravity global --- \n <Gravity global>\n\t" + dbscan.getGl().toString() + "\n</Gravity global>\n\n";
 
             sout2 += " ----- Gravity centers ----- \n";
             sout2 += "<Gravity centers>\n";
