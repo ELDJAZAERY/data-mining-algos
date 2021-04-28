@@ -1,0 +1,7 @@
+{
+  "java.dependency.syncWithFolderExplorer": true,
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "/home/eldjazaery/**/*.jar"
+  ]
+}
